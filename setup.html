@@ -1,0 +1,2360 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Setup | Professional Studio</title>
+
+<link
+    rel="icon"
+    type="image/png"
+    href="https://i.ibb.co/8g0LT3jZ/logo1-2.png"
+>
+
+<link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    rel="stylesheet"
+>
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --bg:#ffffff;
+    --card:#ffffff;
+    --soft:#f7f7f7;
+    --soft2:#fafafa;
+    --border:#e5e5e5;
+    --border-dark:#d5d5d5;
+    --text:#111111;
+    --muted:#666666;
+    --light-muted:#999999;
+    --black:#111111;
+    --success:#16a34a;
+    --danger:#dc2626;
+}
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body{
+    font-family:'Poppins','Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    background:#ffffff;
+    color:var(--text);
+    min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
+    line-height:1.7;
+}
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.background-blur{
+    position:fixed;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:-1;
+    opacity:.035;
+    pointer-events:none;
+}
+
+.blur1{
+    width:350px;
+    height:350px;
+    background:#000000;
+    top:-150px;
+    left:-120px;
+}
+
+.blur2{
+    width:400px;
+    height:400px;
+    background:#777777;
+    right:-180px;
+    bottom:-180px;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.setup-container{
+    width:min(1200px,92%);
+    margin:auto;
+    padding:50px 0 70px;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.setup-header{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.setup-header h1{
+    font-size:2.4rem;
+    margin-bottom:10px;
+    font-weight:700;
+    color:#111111;
+    letter-spacing:-.5px;
+}
+
+.setup-header p{
+    color:#666666;
+    font-size:1rem;
+}
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.progress-section{
+    max-width:700px;
+    margin:35px auto 0;
+}
+
+.progress-text{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:12px;
+    color:#333333;
+    font-size:.9rem;
+    font-weight:500;
+}
+
+.progress-bar{
+    width:100%;
+    height:8px;
+    background:#eeeeee;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    width:33%;
+    height:100%;
+    background:#111111;
+    border-radius:20px;
+}
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.card{
+    background:#ffffff;
+    border:1px solid #e5e5e5;
+    border-radius:20px;
+    padding:35px;
+    margin-bottom:28px;
+    box-shadow:0 10px 30px rgba(0,0,0,.045);
+    animation:fadeUp .6s ease;
+    transition:.3s ease;
+}
+
+.card:hover{
+    border-color:#cfcfcf;
+    box-shadow:0 14px 35px rgba(0,0,0,.07);
+}
+
+.card h2{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:1.4rem;
+    margin-bottom:28px;
+    color:#111111;
+}
+
+.card h2 i{
+    color:#111111;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.grid-2{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.input-column{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-size:.92rem;
+    color:#333333;
+    font-weight:500;
+}
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+input,
+textarea{
+    width:100%;
+    background:#f8f8f8;
+    border:1px solid #dddddd;
+    border-radius:12px;
+    color:#111111;
+    padding:14px 16px;
+    outline:none;
+    transition:.25s ease;
+    font-size:.95rem;
+    font-family:inherit;
+}
+
+input:hover,
+textarea:hover{
+    border-color:#cfcfcf;
+}
+
+input:focus,
+textarea:focus{
+    background:#ffffff;
+    border-color:#111111;
+    box-shadow:0 0 0 3px rgba(0,0,0,.06);
+}
+
+textarea{
+    resize:vertical;
+    min-height:130px;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:#999999;
+}
+
+/* =========================================================
+   NUMBER INPUT
+========================================================= */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+    opacity:1;
+}
+
+/* =========================================================
+   UPLOAD BOX
+========================================================= */
+
+.upload-box{
+    width:100%;
+}
+
+.photo-upload{
+    width:100%;
+}
+
+.upload-label{
+    width:100%;
+    min-height:250px;
+
+    border:2px dashed #d5d5d5;
+    border-radius:18px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+    text-align:center;
+
+    padding:20px;
+
+    background:#fafafa;
+
+    overflow:hidden;
+    position:relative;
+}
+
+.upload-label:hover{
+    border-color:#111111;
+    background:#f5f5f5;
+    transform:translateY(-2px);
+}
+
+.upload-label i{
+    font-size:2.5rem;
+    color:#111111;
+    margin-bottom:16px;
+}
+
+.upload-label p{
+    font-size:1rem;
+    margin-bottom:6px;
+    color:#111111;
+    font-weight:600;
+}
+
+.upload-label span{
+    color:#777777;
+    font-size:.85rem;
+}
+
+/* =========================================================
+   PHOTO PREVIEW
+========================================================= */
+
+.photoPreview{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:14px;
+    display:none;
+}
+
+.upload-label.has-image{
+    padding:8px;
+    border-style:solid;
+    border-color:#dddddd;
+    background:#ffffff;
+}
+
+.upload-label.has-image .photoPreview{
+    display:block;
+}
+
+.upload-label.has-image i,
+.upload-label.has-image p,
+.upload-label.has-image span{
+    display:none;
+}
+
+/* =========================================================
+   PHOTO OVERLAY
+========================================================= */
+
+.photo-overlay{
+    position:absolute;
+    left:50%;
+    bottom:18px;
+    transform:translateX(-50%);
+
+    background:rgba(17,17,17,.9);
+    color:#ffffff;
+
+    padding:8px 15px;
+    border-radius:30px;
+
+    font-size:.78rem;
+    font-weight:500;
+
+    opacity:0;
+    transition:.25s ease;
+}
+
+.upload-label.has-image:hover .photo-overlay{
+    opacity:1;
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.section-heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.section-heading h2{
+    margin:0;
+}
+
+/* =========================================================
+   PHOTOGRAPHER CARD
+========================================================= */
+
+.photographer-card{
+    display:grid;
+    grid-template-columns:280px 1fr;
+    gap:35px;
+
+    padding:28px;
+
+    border-radius:18px;
+
+    background:#fafafa;
+    border:1px solid #e5e5e5;
+
+    transition:.3s ease;
+}
+
+.photographer-card:hover{
+    border-color:#d0d0d0;
+}
+
+.photo-side{
+    display:flex;
+    align-items:flex-start;
+}
+
+.details-side{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.details-side textarea{
+    margin-top:0;
+}
+
+/* =========================================================
+   SESSIONS INPUT
+========================================================= */
+
+.sessions-input{
+    position:relative;
+}
+
+.sessions-input input{
+    padding-right:60px;
+}
+
+.sessions-unit{
+    position:absolute;
+    right:16px;
+    top:50%;
+    transform:translateY(-50%);
+
+    color:#777777;
+    font-size:.8rem;
+    pointer-events:none;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.buttons{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    margin-top:35px;
+}
+
+.save-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    border:none;
+    cursor:pointer;
+
+    color:#ffffff;
+
+    font-size:1rem;
+    font-weight:600;
+
+    padding:15px 34px;
+
+    border-radius:50px;
+
+    background:#111111;
+
+    transition:.3s ease;
+}
+
+.save-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.save-btn i{
+    transition:.3s ease;
+}
+
+.save-btn:hover i{
+    transform:translateX(5px);
+}
+
+/* =========================================================
+   CHARACTER COUNTER
+========================================================= */
+
+.char-counter{
+    color:#999999;
+    display:block;
+    margin-top:7px;
+    font-size:.78rem;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.input-error{
+    border-color:#dc2626 !important;
+    box-shadow:0 0 0 3px rgba(220,38,38,.08) !important;
+}
+
+/* =========================================================
+   OLD SUCCESS MESSAGE
+========================================================= */
+
+.success-message{
+    display:none;
+
+    padding:14px 18px;
+
+    margin-bottom:20px;
+
+    border-radius:12px;
+
+    background:#f0fdf4;
+    border:1px solid #bbf7d0;
+
+    color:#166534;
+
+    font-size:.9rem;
+}
+
+/* =========================================================
+   SUCCESS POPUP
+========================================================= */
+
+.setup-success-popup{
+    position:fixed;
+
+    top:25px;
+    left:50%;
+
+    transform:translate(-50%, -25px) scale(.95);
+
+    background:#111111;
+    color:#ffffff;
+
+    padding:14px 22px;
+
+    border-radius:14px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    font-size:.9rem;
+    font-weight:500;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
+
+    opacity:0;
+    visibility:hidden;
+
+    z-index:9999;
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease,
+        visibility .3s ease;
+
+    pointer-events:none;
+}
+
+.setup-success-popup.show{
+    opacity:1;
+    visibility:visible;
+    transform:translate(-50%, 0) scale(1);
+}
+
+.setup-success-popup i{
+    color:#4ade80;
+    font-size:1.1rem;
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar{
+    width:9px;
+}
+
+::-webkit-scrollbar-track{
+    background:#f5f5f5;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#bdbdbd;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#888888;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1100px){
+
+    .photographer-card{
+        grid-template-columns:1fr;
+    }
+
+    .photo-side{
+        max-width:350px;
+    }
+
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:900px){
+
+    .grid-2{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:768px){
+
+    .setup-container{
+        width:94%;
+        padding:30px 0 45px;
+    }
+
+    .setup-header{
+        margin-bottom:30px;
+    }
+
+    .setup-header h1{
+        font-size:2rem;
+        line-height:1.25;
+    }
+
+    .setup-header p{
+        font-size:.88rem;
+        line-height:1.5;
+    }
+
+    .card{
+        padding:22px;
+        margin-bottom:20px;
+        border-radius:17px;
+    }
+
+    .card h2{
+        font-size:1.2rem;
+        margin-bottom:22px;
+    }
+
+    .photographer-card{
+        padding:18px;
+        gap:22px;
+    }
+
+    .photo-side{
+        width:100%;
+        max-width:none;
+    }
+
+    .upload-label{
+        min-height:210px;
+    }
+
+    .photoPreview{
+        height:210px;
+    }
+
+    .details-side{
+        gap:16px;
+    }
+
+    .buttons{
+        margin-top:25px;
+    }
+
+    .save-btn{
+        width:100%;
+        padding:14px 22px;
+    }
+
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:500px){
+
+    .setup-container{
+        width:92%;
+    }
+
+    .setup-header h1{
+        font-size:1.7rem;
+    }
+
+    .setup-header p{
+        font-size:.82rem;
+    }
+
+    .progress-section{
+        margin-top:25px;
+    }
+
+    .progress-text{
+        font-size:.8rem;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    .card h2{
+        font-size:1.1rem;
+    }
+
+    .photographer-card{
+        padding:14px;
+    }
+
+    input,
+    textarea{
+        padding:13px;
+        font-size:.9rem;
+    }
+
+    label{
+        font-size:.85rem;
+    }
+
+    .upload-label{
+        min-height:190px;
+    }
+
+    .photoPreview{
+        height:190px;
+    }
+
+    .setup-success-popup{
+        width:calc(100% - 40px);
+        top:18px;
+        text-align:center;
+        padding:13px 18px;
+    }
+
+}
+
+</style>
+
+    <link rel="stylesheet" href="frontend-core.css">
+</head>
+
+<body>
+
+<div class="background-blur blur1"></div>
+<div class="background-blur blur2"></div>
+
+<div class="setup-container">
+
+<header class="setup-header">
+
+
+<h1>Complete Your Portfolio</h1>
+
+<p>
+    Create your professional profile before accessing your dashboard.
+</p>
+
+<div class="progress-section">
+
+    <div class="progress-text">
+
+        <span>Step 1 of 3</span>
+
+        <span>33%</span>
+
+    </div>
+
+    <div class="progress-bar">
+
+        <div class="progress-fill"></div>
+
+    </div>
+
+</div>
+
+
+</header>
+
+<form id="profileForm">
+
+<div id="successMessage" class="success-message">
+    <i class="fa-solid fa-circle-check"></i>
+    Profile saved successfully.
+</div>
+
+<div id="setupSuccessPopup" class="setup-success-popup">
+
+
+<i class="fa-solid fa-circle-check"></i>
+
+<span>
+    Profile saved successfully!
+</span>
+
+
+</div>
+
+<section class="card">
+
+
+<h2>
+    <i class="fa-solid fa-building"></i>
+    Studio Information
+</h2>
+
+<div class="input-column">
+
+    <div>
+
+        <label for="studioName">
+            Studio Name
+        </label>
+
+        <input
+            id="studioName"
+            type="text"
+            maxlength="100"
+            placeholder="ex: Professional Studio">
+
+    </div>
+
+    <div>
+
+        <label for="studioTagline">
+            Studio Tagline
+        </label>
+
+        <input
+            id="studioTagline"
+            type="text"
+            maxlength="150"
+            placeholder="ex: Capturing Timeless Memories">
+
+    </div>
+
+</div>
+
+
+</section>
+
+<section class="card">
+
+
+<div class="section-heading">
+
+    <h2>
+        <i class="fa-solid fa-camera"></i>
+        Meet the Photographer
+    </h2>
+
+</div>
+
+
+<div id="photographerContainer">
+
+    <div class="photographer-card">
+
+        <div class="photo-side">
+
+            <div class="upload-box">
+
+                <input
+                    type="file"
+                    accept="image/jpeg,image/png,image/webp"
+                    class="photoInput"
+                    id="photoInput"
+                    hidden>
+
+                <label
+                    class="upload-label"
+                    for="photoInput">
+
+                    <img
+                        class="photoPreview"
+                        id="photoPreview"
+                        src=""
+                        alt="Photographer Preview">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <p>
+                        Upload Photo
+                    </p>
+
+                    <span>
+                        JPG, PNG or WebP
+                    </span>
+
+                    <div class="photo-overlay">
+
+                        <i class="fa-solid fa-camera"></i>
+
+                        Change Photo
+
+                    </div>
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <div class="details-side">
+
+            <div class="grid-2">
+
+                <div>
+
+                    <label for="photographerName">
+                        Full Name
+                    </label>
+
+                    <input
+                        id="photographerName"
+                        type="text"
+                        maxlength="100"
+                        placeholder="ex: Rahul Patil">
+
+                </div>
+
+
+                <div>
+
+                    <label for="professionalRole">
+                        Professional Role
+                    </label>
+
+                    <input
+                        id="professionalRole"
+                        type="text"
+                        maxlength="100"
+                        placeholder="ex: Lead Photographer">
+
+                </div>
+
+
+                <div>
+
+                    <label for="photographerExperience">
+                        Experience
+                    </label>
+
+                    <div class="sessions-input">
+
+                        <input
+                            id="photographerExperience"
+                            type="number"
+                            min="0"
+                            max="100"
+                            placeholder="ex: 5">
+
+                        <span class="sessions-unit">
+                            Years
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <label for="sessionsDone">
+                        Sessions Done
+                    </label>
+
+                    <div class="sessions-input">
+
+                        <input
+                            id="sessionsDone"
+                            type="number"
+                            min="0"
+                            max="1000000"
+                            placeholder="ex: 250">
+
+                        <span class="sessions-unit">
+                            Sessions
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <label for="specialization">
+                        Specialization
+                    </label>
+
+                    <input
+                        id="specialization"
+                        type="text"
+                        maxlength="150"
+                        placeholder="ex: Wedding Photography">
+
+                </div>
+
+
+                <div>
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        id="phone"
+                        type="tel"
+                        maxlength="30"
+                        placeholder="ex: +91 9876543210">
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <label for="about">
+                    About Yourself
+                </label>
+
+                <textarea
+                    id="about"
+                    rows="5"
+                    maxlength="300"
+                    placeholder="Tell clients about yourself, your experience and photography style."></textarea>
+
+                <small
+                    class="char-counter"
+                    id="aboutCounter">
+                    0 / 300
+                </small>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<section class="card">
+
+
+<h2>
+    <i class="fa-solid fa-location-dot"></i>
+    Studio Address
+</h2>
+
+<label for="address">
+    Full Address
+</label>
+
+<textarea
+    id="address"
+    rows="4"
+    maxlength="300"
+    placeholder="Enter your complete studio address"></textarea>
+
+<small
+    class="char-counter"
+    id="addressCounter">
+    0 / 300
+</small>
+
+
+</section>
+
+<section class="card">
+
+
+<h2>
+    <i class="fa-solid fa-share-nodes"></i>
+    Social Media
+</h2>
+
+<div class="grid-2">
+
+    <div>
+
+        <label for="instagram">
+            Instagram
+        </label>
+
+        <input
+            id="instagram"
+            type="text"
+            maxlength="200"
+            placeholder="ex: @yourprofile">
+
+    </div>
+
+
+    <div>
+
+        <label for="facebook">
+            Facebook
+        </label>
+
+        <input
+            id="facebook"
+            type="text"
+            maxlength="200"
+            placeholder="ex: yourprofile">
+
+    </div>
+
+
+    <div>
+
+        <label for="youtube">
+            YouTube
+        </label>
+
+        <input
+            id="youtube"
+            type="text"
+            maxlength="200"
+            placeholder="ex: @yourchannel">
+
+    </div>
+
+</div>
+
+
+</section>
+
+<div class="buttons">
+
+
+<button
+    type="submit"
+    class="save-btn"
+    id="saveProfileBtn">
+
+    <span>Save & Continue</span>
+
+    <i class="fa-solid fa-arrow-right"></i>
+
+</button>
+
+
+</div>
+
+</form>
+
+</div>
+
+<script>
+
+/* =========================================================
+   PROFESSIONAL STUDIO
+   PROFILE STORAGE LAYER
+========================================================= */
+
+(function(){
+
+"use strict";
+
+
+/* =========================================================
+   CONSTANTS
+========================================================= */
+
+const PROFILE_STORAGE_KEY =
+    "professionalStudio.profile";
+
+const LEGACY_PROFILE_KEY =
+    "professionalStudio.user";
+
+
+/* =========================================================
+   DEFAULT PROFILE
+   Backend-friendly field structure
+========================================================= */
+
+const DEFAULT_PROFILE = {
+
+    studioName:"",
+    studioTagline:"",
+
+    photographerName:"",
+    professionalRole:"",
+
+    experience:0,
+    sessionsDone:0,
+
+    specialization:"",
+    about:"",
+    phone:"",
+    address:"",
+
+    social:{
+        instagram:"",
+        facebook:"",
+        youtube:""
+    },
+
+    profilePhoto:"",
+
+    profileCompleted:false,
+
+    updatedAt:null
+
+};
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const form =
+    document.getElementById("profileForm");
+
+const photoInput =
+    document.getElementById("photoInput");
+
+const photoPreview =
+    document.getElementById("photoPreview");
+
+const uploadLabel =
+    document.querySelector(".upload-label");
+
+const successPopup =
+    document.getElementById("setupSuccessPopup");
+
+const successMessage =
+    document.getElementById("successMessage");
+
+const saveProfileBtn =
+    document.getElementById("saveProfileBtn");
+
+
+/* =========================================================
+   SAFE LOCAL STORAGE
+========================================================= */
+
+function readJSON(key, fallback){
+
+    try{
+
+        const raw =
+            localStorage.getItem(key);
+
+        if(!raw){
+            return fallback;
+        }
+
+        return JSON.parse(raw);
+
+    }catch(error){
+
+        console.error(
+            "Professional Studio storage read failed:",
+            error
+        );
+
+        return fallback;
+    }
+
+}
+
+
+function writeJSON(key, value){
+
+    try{
+
+        localStorage.setItem(
+            key,
+            JSON.stringify(value)
+        );
+
+        return true;
+
+    }catch(error){
+
+        console.error(
+            "Professional Studio storage write failed:",
+            error
+        );
+
+        return false;
+    }
+
+}
+
+
+/* =========================================================
+   PROFILE NORMALIZATION
+   Keeps future backend structure stable
+========================================================= */
+
+function normalizeProfile(data){
+
+    const source =
+        data && typeof data === "object"
+            ? data
+            : {};
+
+    const social =
+        source.social &&
+        typeof source.social === "object"
+            ? source.social
+            : {};
+
+    return {
+
+        studioName:
+            String(source.studioName || "").trim(),
+
+        studioTagline:
+            String(source.studioTagline || "").trim(),
+
+        photographerName:
+            String(source.photographerName || "").trim(),
+
+        professionalRole:
+            String(source.professionalRole || "").trim(),
+
+        experience:
+            Math.max(
+                0,
+                Number(source.experience) || 0
+            ),
+
+        sessionsDone:
+            Math.max(
+                0,
+                Number(source.sessionsDone) || 0
+            ),
+
+        specialization:
+            String(source.specialization || "").trim(),
+
+        about:
+            String(source.about || "").trim(),
+
+        phone:
+            String(source.phone || "").trim(),
+
+        address:
+            String(source.address || "").trim(),
+
+        social:{
+            instagram:
+                String(social.instagram || "").trim(),
+
+            facebook:
+                String(social.facebook || "").trim(),
+
+            youtube:
+                String(social.youtube || "").trim()
+        },
+
+        profilePhoto:
+            String(source.profilePhoto || ""),
+
+        profileCompleted:
+            Boolean(source.profileCompleted),
+
+        updatedAt:
+            source.updatedAt || null
+
+    };
+
+}
+
+
+/* =========================================================
+   LOAD PROFILE
+========================================================= */
+
+function getProfile(){
+
+    const saved =
+        readJSON(
+            PROFILE_STORAGE_KEY,
+            null
+        );
+
+    if(saved){
+
+        return normalizeProfile(saved);
+
+    }
+
+
+    /*
+       Compatibility with the older user object
+       used by the previous setup version.
+    */
+
+    const legacy =
+        readJSON(
+            LEGACY_PROFILE_KEY,
+            null
+        );
+
+    if(legacy){
+
+        const converted = normalizeProfile({
+
+            studioName:
+                legacy.std_name,
+
+            studioTagline:
+                legacy.std_tag,
+
+            photographerName:
+                legacy.full_name,
+
+            professionalRole:
+                legacy.professional_role,
+
+            experience:
+                legacy.experience,
+
+            sessionsDone:
+                legacy.sessions_done,
+
+            specialization:
+                legacy.specialization,
+
+            about:
+                legacy.about,
+
+            phone:
+                legacy.phone,
+
+            address:
+                legacy.std_address,
+
+            social:{
+                instagram:
+                    legacy.insta_handle,
+
+                facebook:
+                    legacy.facebook_handle,
+
+                youtube:
+                    legacy.yt_handle
+            },
+
+            profilePhoto:
+                legacy.profilePhoto,
+
+            profileCompleted:
+                true,
+
+            updatedAt:
+                legacy.updatedAt
+
+        });
+
+        return converted;
+
+    }
+
+
+    return {
+        ...DEFAULT_PROFILE,
+        social:{
+            ...DEFAULT_PROFILE.social
+        }
+    };
+
+}
+
+
+/* =========================================================
+   SAVE PROFILE
+========================================================= */
+
+function saveProfile(profile){
+
+    return writeJSON(
+        PROFILE_STORAGE_KEY,
+        normalizeProfile(profile)
+    );
+
+}
+
+
+/* =========================================================
+   FORM HELPERS
+========================================================= */
+
+function valueOf(id){
+
+    const element =
+        document.getElementById(id);
+
+    return element
+        ? element.value.trim()
+        : "";
+
+}
+
+
+function numberValueOf(id){
+
+    const element =
+        document.getElementById(id);
+
+    if(!element){
+        return 0;
+    }
+
+    const value =
+        Number(element.value);
+
+    return Number.isFinite(value)
+        ? Math.max(0,value)
+        : 0;
+
+}
+
+
+/* =========================================================
+   FILL FORM
+========================================================= */
+
+function populateForm(profile){
+
+    document.getElementById("studioName").value =
+        profile.studioName;
+
+    document.getElementById("studioTagline").value =
+        profile.studioTagline;
+
+    document.getElementById("photographerName").value =
+        profile.photographerName;
+
+    document.getElementById("professionalRole").value =
+        profile.professionalRole;
+
+    document.getElementById("photographerExperience").value =
+        profile.experience || "";
+
+    document.getElementById("sessionsDone").value =
+        profile.sessionsDone || "";
+
+    document.getElementById("specialization").value =
+        profile.specialization;
+
+    document.getElementById("about").value =
+        profile.about;
+
+    document.getElementById("phone").value =
+        profile.phone;
+
+    document.getElementById("address").value =
+        profile.address;
+
+    document.getElementById("instagram").value =
+        profile.social.instagram;
+
+    document.getElementById("facebook").value =
+        profile.social.facebook;
+
+    document.getElementById("youtube").value =
+        profile.social.youtube;
+
+
+    if(profile.profilePhoto){
+
+        photoPreview.src =
+            profile.profilePhoto;
+
+        uploadLabel.classList.add(
+            "has-image"
+        );
+
+    }
+
+
+    updateAllCounters();
+
+}
+
+
+/* =========================================================
+   BUILD PROFILE OBJECT
+========================================================= */
+
+function collectProfile(){
+
+    return {
+
+        studioName:
+            valueOf("studioName"),
+
+        studioTagline:
+            valueOf("studioTagline"),
+
+        photographerName:
+            valueOf("photographerName"),
+
+        professionalRole:
+            valueOf("professionalRole"),
+
+        experience:
+            numberValueOf(
+                "photographerExperience"
+            ),
+
+        sessionsDone:
+            numberValueOf(
+                "sessionsDone"
+            ),
+
+        specialization:
+            valueOf("specialization"),
+
+        about:
+            valueOf("about"),
+
+        phone:
+            valueOf("phone"),
+
+        address:
+            valueOf("address"),
+
+        social:{
+            instagram:
+                valueOf("instagram"),
+
+            facebook:
+                valueOf("facebook"),
+
+            youtube:
+                valueOf("youtube")
+        },
+
+        profilePhoto:
+            photoPreview.src || "",
+
+        profileCompleted:true,
+
+        updatedAt:
+            new Date().toISOString()
+
+    };
+
+}
+
+
+/* =========================================================
+   CHARACTER COUNTERS
+========================================================= */
+
+function setupCounter(
+    textareaId,
+    counterId
+){
+
+    const textarea =
+        document.getElementById(
+            textareaId
+        );
+
+    const counter =
+        document.getElementById(
+            counterId
+        );
+
+    if(!textarea || !counter){
+        return;
+    }
+
+
+    function updateCounter(){
+
+        counter.textContent =
+            `${textarea.value.length} / 300`;
+
+    }
+
+
+    textarea.addEventListener(
+        "input",
+        updateCounter
+    );
+
+    updateCounter();
+
+}
+
+
+setupCounter(
+    "about",
+    "aboutCounter"
+);
+
+setupCounter(
+    "address",
+    "addressCounter"
+);
+
+
+function updateAllCounters(){
+
+    const about =
+        document.getElementById("about");
+
+    const address =
+        document.getElementById("address");
+
+    if(about){
+
+        document.getElementById(
+            "aboutCounter"
+        ).textContent =
+            `${about.value.length} / 300`;
+
+    }
+
+    if(address){
+
+        document.getElementById(
+            "addressCounter"
+        ).textContent =
+            `${address.value.length} / 300`;
+
+    }
+
+}
+
+
+/* =========================================================
+   ERROR HANDLING
+========================================================= */
+
+function clearError(input){
+
+    if(input){
+
+        input.classList.remove(
+            "input-error"
+        );
+
+    }
+
+}
+
+
+function markError(input){
+
+    if(input){
+
+        input.classList.add(
+            "input-error"
+        );
+
+        input.focus();
+
+    }
+
+}
+
+
+/* Clear validation errors while typing */
+
+document.querySelectorAll(
+    "#profileForm input, #profileForm textarea"
+).forEach(function(input){
+
+    input.addEventListener(
+        "input",
+        function(){
+
+            clearError(this);
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   VALIDATION
+========================================================= */
+
+function validateProfile(){
+
+    const studioName =
+        document.getElementById(
+            "studioName"
+        );
+
+    const photographerName =
+        document.getElementById(
+            "photographerName"
+        );
+
+    const experience =
+        document.getElementById(
+            "photographerExperience"
+        );
+
+    const sessionsDone =
+        document.getElementById(
+            "sessionsDone"
+        );
+
+    const phone =
+        document.getElementById(
+            "phone"
+        );
+
+
+    if(studioName.value.trim() === ""){
+
+        alert(
+            "Please enter your studio name."
+        );
+
+        markError(studioName);
+
+        return false;
+
+    }
+
+
+    if(photographerName.value.trim() === ""){
+
+        alert(
+            "Please enter photographer name."
+        );
+
+        markError(photographerName);
+
+        return false;
+
+    }
+
+
+    if(
+        experience.value !== "" &&
+        (
+            Number(experience.value) < 0 ||
+            Number(experience.value) > 100
+        )
+    ){
+
+        alert(
+            "Please enter a valid experience between 0 and 100 years."
+        );
+
+        markError(experience);
+
+        return false;
+
+    }
+
+
+    if(
+        sessionsDone.value !== "" &&
+        Number(sessionsDone.value) < 0
+    ){
+
+        alert(
+            "Sessions done cannot be negative."
+        );
+
+        markError(sessionsDone);
+
+        return false;
+
+    }
+
+
+    if(phone.value.trim() !== ""){
+
+        const phoneDigits =
+            phone.value.replace(
+                /[^0-9]/g,
+                ""
+            );
+
+        if(
+            phoneDigits.length < 7 ||
+            phoneDigits.length > 15
+        ){
+
+            alert(
+                "Please enter a valid phone number."
+            );
+
+            markError(phone);
+
+            return false;
+
+        }
+
+    }
+
+
+    return true;
+
+}
+
+
+/* =========================================================
+   PHOTO UPLOAD + PREVIEW
+========================================================= */
+
+if(photoInput){
+
+    photoInput.addEventListener(
+        "change",
+        function(){
+
+            const file =
+                this.files &&
+                this.files[0];
+
+            if(!file){
+                return;
+            }
+
+
+            if(![
+                "image/jpeg",
+                "image/png",
+                "image/webp"
+            ].includes(file.type)){
+
+                alert(
+                    "Please select a JPG, PNG or WebP image."
+                );
+
+                this.value = "";
+
+                return;
+
+            }
+
+
+            if(
+                file.size >
+                5 * 1024 * 1024
+            ){
+
+                alert(
+                    "Please select an image smaller than 5MB."
+                );
+
+                this.value = "";
+
+                return;
+
+            }
+
+
+            const reader =
+                new FileReader();
+
+
+            reader.onload =
+                function(event){
+
+                    photoPreview.src =
+                        event.target.result;
+
+                    uploadLabel.classList.add(
+                        "has-image"
+                    );
+
+                };
+
+
+            reader.onerror =
+                function(){
+
+                    alert(
+                        "Unable to read the selected image."
+                    );
+
+                    photoInput.value = "";
+
+                };
+
+
+            reader.readAsDataURL(file);
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   SAVE BUTTON STATE
+========================================================= */
+
+function setSavingState(isSaving){
+
+    if(!saveProfileBtn){
+        return;
+    }
+
+
+    if(isSaving){
+
+        saveProfileBtn.disabled = true;
+
+        saveProfileBtn.style.opacity =
+            "0.7";
+
+        saveProfileBtn.style.cursor =
+            "wait";
+
+        saveProfileBtn.innerHTML =
+
+            `<span>Saving...</span>
+             <i class="fa-solid fa-spinner fa-spin"></i>`;
+
+    }else{
+
+        saveProfileBtn.disabled = false;
+
+        saveProfileBtn.style.opacity =
+            "";
+
+        saveProfileBtn.style.cursor =
+            "";
+
+        saveProfileBtn.innerHTML =
+
+            `<span>Save & Continue</span>
+             <i class="fa-solid fa-arrow-right"></i>`;
+
+    }
+
+}
+
+
+/* =========================================================
+   SUCCESS POPUP
+========================================================= */
+
+function showSuccess(){
+
+    if(successPopup){
+
+        successPopup.classList.add(
+            "show"
+        );
+
+
+        setTimeout(function(){
+
+            successPopup.classList.remove(
+                "show"
+            );
+
+        },3000);
+
+    }
+
+}
+
+
+/* =========================================================
+   PROFILE SAVE
+========================================================= */
+
+if(form){
+
+    form.addEventListener(
+        "submit",
+        function(event){
+
+            event.preventDefault();
+
+
+            if(!validateProfile()){
+                return;
+            }
+
+
+            setSavingState(true);
+
+
+            const profile =
+                collectProfile();
+
+
+            const saved =
+                saveProfile(profile);
+
+
+            if(!saved){
+
+                setSavingState(false);
+
+                alert(
+                    "Unable to save your profile in this browser. Please check your browser storage settings."
+                );
+
+                return;
+
+            }
+
+
+            /*
+             * Keep a small compatibility copy for
+             * older frontend pages until they are migrated.
+             *
+             * This can be removed once the whole frontend
+             * uses professionalStudio.profile.
+             */
+
+            writeJSON(
+                LEGACY_PROFILE_KEY,
+                {
+                    std_name:
+                        profile.studioName,
+
+                    std_tag:
+                        profile.studioTagline,
+
+                    full_name:
+                        profile.photographerName,
+
+                    professional_role:
+                        profile.professionalRole,
+
+                    experience:
+                        profile.experience,
+
+                    sessions_done:
+                        profile.sessionsDone,
+
+                    specialization:
+                        profile.specialization,
+
+                    about:
+                        profile.about,
+
+                    phone:
+                        profile.phone,
+
+                    std_address:
+                        profile.address,
+
+                    insta_handle:
+                        profile.social.instagram,
+
+                    facebook_handle:
+                        profile.social.facebook,
+
+                    yt_handle:
+                        profile.social.youtube,
+
+                    profilePhoto:
+                        profile.profilePhoto,
+
+                    updatedAt:
+                        profile.updatedAt
+                }
+            );
+
+
+            setSavingState(false);
+
+            showSuccess();
+
+
+            window.scrollTo({
+
+                top:0,
+
+                behavior:"smooth"
+
+            });
+
+
+            /*
+             * Notify other open Professional Studio
+             * pages/tabs that the profile changed.
+             */
+
+            window.dispatchEvent(
+                new CustomEvent(
+                    "professionalStudioProfileUpdated",
+                    {
+                        detail:profile
+                    }
+                )
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   INITIALIZE
+========================================================= */
+
+function initializeProfilePage(){
+
+    const profile =
+        getProfile();
+
+    populateForm(profile);
+
+}
+
+
+if(
+    document.readyState ===
+    "loading"
+){
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        initializeProfilePage
+    );
+
+}else{
+
+    initializeProfilePage();
+
+}
+
+
+/* =========================================================
+   PUBLIC FRONTEND API
+   Other pages can use these functions without
+   knowing how storage works.
+========================================================= */
+
+window.ProfessionalStudioProfile = {
+
+    get:
+        getProfile,
+
+    save:
+        saveProfile,
+
+    reload:
+        initializeProfilePage
+
+};
+
+/* Frontend completion guard: show live completion and protect unsaved work. */
+(function(){
+    const form = document.getElementById("profileForm");
+    const progressFill = document.querySelector(".progress-fill");
+    const progressLabel = document.querySelector(".progress-text span:last-child");
+    if(!form) return;
+    let dirty = false;
+    let baseline = "";
+    function snapshot(){
+        const data = new FormData(form);
+        const values = [];
+        for(const pair of data.entries()){
+            if(pair[0] === "profilePhoto") continue;
+            values.push([pair[0], String(pair[1])]);
+        }
+        return JSON.stringify(values);
+    }
+    function updateProgress(){
+        const ids=["studioName","photographerName","professionalRole","specialization","phone","about","address"];
+        const filled=ids.filter(id=>{const el=document.getElementById(id);return el && String(el.value||"").trim();}).length;
+        const percent=Math.round(filled/ids.length*100);
+        if(progressFill) progressFill.style.width=Math.max(8,percent)+"%";
+        if(progressLabel) progressLabel.textContent=percent+"% complete";
+    }
+    form.addEventListener("input",function(){dirty=snapshot()!==baseline;updateProgress();});
+    form.addEventListener("change",function(){dirty=snapshot()!==baseline;updateProgress();});
+    form.addEventListener("submit",function(){setTimeout(function(){baseline=snapshot();dirty=false;form.dispatchEvent(new Event("ps:saved"));},0)});
+    window.addEventListener("beforeunload",function(e){if(dirty){e.preventDefault();e.returnValue="";}});
+    baseline=snapshot(); updateProgress();
+})();
+
+})();
+
+</script>
+
+<script src="frontend-core.js"></script>
+<script src="backend-client.js"></script>
+</body>
+
+</html>

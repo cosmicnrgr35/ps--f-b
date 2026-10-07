@@ -1,0 +1,18 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    {"source":"/login","destination":"/api/login_page","statusCode":301},
+    {"source":"/auth/login.html","destination":"/api/login_page","statusCode":301},
+    {"source":"/signup","destination":"/api/signup_page","statusCode":301},
+    {"source":"/auth/signup.html","destination":"/api/signup_page","statusCode":301}
+  ],
+  "headers": [
+    {"source":"/(.*)","headers":[
+      {"key":"X-Content-Type-Options","value":"nosniff"},
+      {"key":"X-Frame-Options","value":"SAMEORIGIN"},
+      {"key":"Referrer-Policy","value":"strict-origin-when-cross-origin"},
+      {"key":"Permissions-Policy","value":"camera=(), microphone=(), geolocation=(self)"},
+      {"key":"Strict-Transport-Security","value":"max-age=31536000; includeSubDomains"}
+    ]}
+  ]
+}

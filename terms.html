@@ -1,0 +1,2992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Terms of Service for Professional Studio, a photography studio management and client booking platform."
+    >
+
+    <title>
+        Professional Studio | Terms of Service
+    </title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="https://i.ibb.co/8g0LT3jZ/logo1-2.png"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+<style>
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --black: #111111;
+    --dark: #1a1a1a;
+
+    --text: #202020;
+    --muted: #666666;
+    --light-muted: #858585;
+
+    --background: #ffffff;
+    --surface: #fafafa;
+    --soft: #f5f5f3;
+
+    --border: #e7e7e4;
+
+    --max-width: 1240px;
+
+    --serif:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    --sans:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 100px;
+
+}
+
+
+body {
+
+    font-family: var(--sans);
+
+    background: var(--background);
+
+    color: var(--text);
+
+    line-height: 1.75;
+
+    overflow-x: hidden;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+ul {
+
+    padding-left: 22px;
+
+}
+
+
+li {
+
+    margin-bottom: 10px;
+
+}
+
+
+::selection {
+
+    background: #111111;
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+
+    width: 100%;
+
+    border-bottom: 1px solid var(--border);
+
+    background: rgba(255, 255, 255, .94);
+
+    backdrop-filter: blur(14px);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+
+.navbar-inner {
+
+    width: min(var(--max-width), 92%);
+
+    min-height: 72px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+.brand {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    letter-spacing: -.02em;
+
+}
+
+
+.brand-mark {
+
+    width: 30px;
+
+    height: 30px;
+
+    border: 1px solid #111111;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 14px;
+
+    line-height: 1;
+
+}
+
+
+.back-link {
+
+    font-size: 13px;
+
+    color: var(--muted);
+
+    transition: color .2s ease;
+
+}
+
+
+.back-link:hover {
+
+    color: #111111;
+
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+
+    border-bottom: 1px solid var(--border);
+
+    background: var(--surface);
+
+}
+
+
+.page-header-inner {
+
+    width: min(var(--max-width), 92%);
+
+    margin: auto;
+
+    padding: 90px 0 75px;
+
+}
+
+
+.eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: .16em;
+
+    color: var(--light-muted);
+
+}
+
+
+.page-header h1 {
+
+    max-width: 850px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(44px, 6vw, 76px);
+
+    font-weight: 600;
+
+    letter-spacing: -.045em;
+
+    line-height: 1.05;
+
+    color: var(--black);
+
+}
+
+
+.page-header p {
+
+    max-width: 720px;
+
+    margin-top: 24px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+.page-meta {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 36px;
+
+}
+
+
+.page-meta span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 9px 13px;
+
+    border: 1px solid var(--border);
+
+    background: #ffffff;
+
+    font-size: 12px;
+
+    color: var(--muted);
+
+}
+
+
+.page-meta strong {
+
+    color: var(--text);
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.terms-layout {
+
+    width: min(var(--max-width), 92%);
+
+    margin: auto;
+
+    padding: 70px 0 100px;
+
+    display: grid;
+
+    grid-template-columns: 255px minmax(0, 1fr);
+
+    gap: 75px;
+
+    align-items: start;
+
+}
+
+
+/* =========================================================
+   TABLE OF CONTENTS
+========================================================= */
+
+.toc {
+
+    position: sticky;
+
+    top: 100px;
+
+    align-self: start;
+
+}
+
+
+.toc-inner {
+
+    border-left: 1px solid var(--border);
+
+    padding-left: 20px;
+
+}
+
+
+.toc-label {
+
+    margin-bottom: 18px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .14em;
+
+    color: var(--light-muted);
+
+}
+
+
+.toc nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.toc a {
+
+    padding: 6px 0;
+
+    font-size: 12px;
+
+    line-height: 1.45;
+
+    color: #777777;
+
+    transition:
+        color .2s ease,
+        padding-left .2s ease;
+
+}
+
+
+.toc a:hover {
+
+    color: #111111;
+
+    padding-left: 4px;
+
+}
+
+
+.toc a.active {
+
+    color: #111111;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   TERMS CONTENT
+========================================================= */
+
+.terms-content {
+
+    min-width: 0;
+
+}
+
+
+.terms-section {
+
+    position: relative;
+
+    padding: 0 0 62px;
+
+    margin-bottom: 62px;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.terms-section:last-child {
+
+    border-bottom: none;
+
+    margin-bottom: 0;
+
+}
+
+
+.section-number {
+
+    display: block;
+
+    margin-bottom: 13px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+    color: #999999;
+
+}
+
+
+.terms-section h2 {
+
+    margin-bottom: 20px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(26px, 3vw, 35px);
+
+    font-weight: 600;
+
+    line-height: 1.25;
+
+    letter-spacing: -.025em;
+
+    color: #171717;
+
+}
+
+
+.terms-section p {
+
+    max-width: 780px;
+
+    margin-bottom: 17px;
+
+    color: #5f5f5f;
+
+    font-size: 14px;
+
+    line-height: 1.85;
+
+}
+
+
+.terms-section ul {
+
+    max-width: 760px;
+
+    margin: 18px 0 22px;
+
+}
+
+
+.terms-section li {
+
+    padding-left: 4px;
+
+    color: #5f5f5f;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+
+}
+
+
+.terms-section li::marker {
+
+    color: #999999;
+
+}
+
+
+/* =========================================================
+   NOTICE
+========================================================= */
+
+.notice {
+
+    max-width: 780px;
+
+    margin-top: 24px;
+
+    padding: 18px 20px;
+
+    border-left: 2px solid #111111;
+
+    background: var(--soft);
+
+    color: #555555;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+
+}
+
+
+/* =========================================================
+   SUBSCRIPTION PLAN GRID
+========================================================= */
+
+.plan-grid {
+
+    max-width: 780px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+}
+
+
+.plan-item {
+
+    padding: 18px;
+
+    border: 1px solid var(--border);
+
+    background: #ffffff;
+
+}
+
+
+.plan-item strong {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #222222;
+
+}
+
+
+.plan-item span {
+
+    display: block;
+
+    color: #777777;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   INLINE LINK
+========================================================= */
+
+.inline-link {
+
+    display: inline-block;
+
+    margin-top: 3px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #111111;
+
+    border-bottom: 1px solid #111111;
+
+    padding-bottom: 2px;
+
+}
+
+
+/* =========================================================
+   CONTACT CARD
+========================================================= */
+
+.contact-card {
+
+    max-width: 600px;
+
+    margin-top: 25px;
+
+    padding: 23px;
+
+    border: 1px solid var(--border);
+
+    background: var(--surface);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.contact-card strong {
+
+    margin-bottom: 7px;
+
+    color: #222222;
+
+    font-size: 14px;
+
+}
+
+
+.contact-card span {
+
+    color: #666666;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+
+    border-top: 1px solid var(--border);
+
+    background: #111111;
+
+    color: #ffffff;
+
+}
+
+
+.footer-inner {
+
+    width: min(var(--max-width), 92%);
+
+    margin: auto;
+
+    padding: 55px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 50px;
+
+}
+
+
+.footer-brand .brand {
+
+    color: #ffffff;
+
+}
+
+
+.footer-brand .brand-mark {
+
+    border-color: #ffffff;
+
+}
+
+
+.footer-brand p {
+
+    max-width: 340px;
+
+    margin-top: 15px;
+
+    color: #a9a9a9;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
+
+    gap: 20px;
+
+}
+
+
+.footer-links a {
+
+    color: #a9a9a9;
+
+    font-size: 12px;
+
+    transition: color .2s ease;
+
+}
+
+
+.footer-links a:hover {
+
+    color: #ffffff;
+
+}
+
+
+.footer-bottom {
+
+    width: min(var(--max-width), 92%);
+
+    margin: auto;
+
+    padding: 18px 0;
+
+    border-top: 1px solid rgba(255,255,255,.12);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: #888888;
+
+    font-size: 11px;
+
+}
+
+
+.footer-bottom a {
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+a:focus-visible {
+
+    outline: 2px solid #111111;
+
+    outline-offset: 4px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .terms-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+
+    .toc {
+
+        position: relative;
+
+        top: 0;
+
+    }
+
+
+    .toc-inner {
+
+        padding-left: 0;
+
+        border-left: none;
+
+        padding-bottom: 5px;
+
+        border-bottom: 1px solid var(--border);
+
+    }
+
+
+    .toc nav {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 2px 20px;
+
+    }
+
+
+    .toc a {
+
+        padding: 7px 0;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar-inner {
+
+        min-height: 64px;
+
+    }
+
+
+    .brand {
+
+        font-size: 14px;
+
+    }
+
+
+    .brand-mark {
+
+        width: 27px;
+
+        height: 27px;
+
+    }
+
+
+    .back-link {
+
+        font-size: 11px;
+
+    }
+
+
+    .page-header-inner {
+
+        padding: 65px 0 55px;
+
+    }
+
+
+    .page-header h1 {
+
+        font-size: 43px;
+
+    }
+
+
+    .page-header p {
+
+        font-size: 14px;
+
+    }
+
+
+    .page-meta {
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .terms-layout {
+
+        padding-top: 50px;
+
+        padding-bottom: 70px;
+
+    }
+
+
+    .toc nav {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .terms-section {
+
+        padding-bottom: 45px;
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .terms-section h2 {
+
+        font-size: 28px;
+
+    }
+
+
+    .terms-section p,
+
+    .terms-section li {
+
+        font-size: 13px;
+
+    }
+
+
+    .plan-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .footer-inner {
+
+        flex-direction: column;
+
+        padding: 42px 0;
+
+    }
+
+
+    .footer-links {
+
+        justify-content: flex-start;
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        gap: 8px;
+
+        padding: 17px 0;
+
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .navbar-inner {
+
+        width: 90%;
+
+    }
+
+
+    .brand {
+
+        font-size: 13px;
+
+    }
+
+
+    .back-link {
+
+        font-size: 10px;
+
+    }
+
+
+    .page-header-inner,
+
+    .terms-layout {
+
+        width: 90%;
+
+    }
+
+
+    .page-header h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .terms-section h2 {
+
+        font-size: 25px;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+
+    }
+
+    * {
+
+        transition: none !important;
+
+    }
+
+}
+</style>
+
+<link rel="stylesheet" href="frontend-core.css">
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="navbar">
+
+    <div class="navbar-inner">
+
+        <a
+            href="index.html"
+            class="brand"
+        >
+
+            <span class="brand-mark">
+                ◇
+            </span>
+
+            <span>
+                Professional Studio
+            </span>
+
+        </a>
+
+
+        <a
+            href="index.html"
+            class="back-link"
+        >
+            ← Back to Professional Studio
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     PAGE HEADER
+========================================================= -->
+
+<section class="page-header">
+
+    <div class="page-header-inner">
+
+        <span class="eyebrow">
+            LEGAL
+        </span>
+
+        <h1>
+            Terms of Service
+        </h1>
+
+        <p>
+            The terms that govern your use of Professional Studio,
+            including studio management, portfolios, services,
+            bookings, galleries, subscriptions and related features.
+        </p>
+
+
+        <div class="page-meta">
+
+            <span>
+                <strong>Effective</strong>
+                28 September 2026
+            </span>
+
+            <span>
+                <strong>Last updated</strong>
+                28 September 2026
+            </span>
+
+            <span>
+                <strong>Version</strong>
+                2.0
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MAIN CONTENT
+========================================================= -->
+
+<main class="terms-layout">
+
+
+    <!-- =====================================================
+         CONTENTS
+    ====================================================== -->
+
+    <aside class="toc">
+
+        <div class="toc-inner">
+
+            <p class="toc-label">
+                ON THIS PAGE
+            </p>
+
+            <nav>
+
+                <a href="#acceptance">
+                    1. Acceptance
+                </a>
+
+                <a href="#platform">
+                    2. Professional Studio
+                </a>
+
+                <a href="#accounts">
+                    3. Accounts
+                </a>
+
+                <a href="#eligibility">
+                    4. Eligibility
+                </a>
+
+                <a href="#portfolio">
+                    5. Portfolio & Studio Content
+                </a>
+
+                <a href="#services">
+                    6. Services & Packages
+                </a>
+
+                <a href="#bookings">
+                    7. Bookings
+                </a>
+
+                <a href="#galleries">
+                    8. Client Galleries
+                </a>
+
+                <a href="#reviews">
+                    9. Reviews
+                </a>
+
+                <a href="#subscriptions">
+                    10. Subscriptions
+                </a>
+
+                <a href="#payments">
+                    11. Payments
+                </a>
+
+                <a href="#cancellations">
+                    12. Cancellations & Refunds
+                </a>
+
+                <a href="#content">
+                    13. User Content
+                </a>
+
+                <a href="#copyright">
+                    14. Intellectual Property
+                </a>
+
+                <a href="#privacy">
+                    15. Privacy
+                </a>
+
+                <a href="#third-party">
+                    16. Third-Party Services
+                </a>
+
+                <a href="#acceptable-use">
+                    17. Acceptable Use
+                </a>
+
+                <a href="#responsibilities">
+                    18. User Responsibilities
+                </a>
+
+                <a href="#referrals">
+                    19. Referral Program
+                </a>
+
+                <a href="#availability">
+                    20. Service Availability
+                </a>
+
+                <a href="#disclaimer">
+                    21. Disclaimer
+                </a>
+
+                <a href="#liability">
+                    22. Limitation of Liability
+                </a>
+
+                <a href="#indemnification">
+                    23. Indemnification
+                </a>
+
+                <a href="#termination">
+                    24. Suspension & Termination
+                </a>
+
+                <a href="#changes">
+                    25. Changes to These Terms
+                </a>
+
+                <a href="#law">
+                    26. Governing Law
+                </a>
+
+                <a href="#contact">
+                    27. Contact
+                </a>
+
+                <a href="#agreement">
+                    28. Entire Agreement
+                </a>
+
+            </nav>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         TERMS
+    ====================================================== -->
+
+    <article class="terms-content">
+
+
+        <!-- 1 -->
+
+        <section
+            class="terms-section"
+            id="acceptance"
+        >
+
+            <span class="section-number">
+                01
+            </span>
+
+            <h2>
+                Acceptance of Terms
+            </h2>
+
+            <p>
+                By accessing or using Professional Studio,
+                you acknowledge that you have read, understood,
+                and agree to be bound by these Terms of Service.
+            </p>
+
+            <p>
+                If you do not agree with these Terms, you should
+                discontinue your use of Professional Studio.
+            </p>
+
+        </section>
+
+
+
+        <!-- 2 -->
+
+        <section
+            class="terms-section"
+            id="platform"
+        >
+
+            <span class="section-number">
+                02
+            </span>
+
+            <h2>
+                Professional Studio
+            </h2>
+
+            <p>
+                Professional Studio is a digital platform designed
+                to help photographers and photography businesses
+                manage and present their work online.
+            </p>
+
+            <p>
+                Depending on the features available to your account,
+                the platform may provide tools for:
+            </p>
+
+            <ul>
+
+                <li>
+                    Photographer portfolio presentation.
+                </li>
+
+                <li>
+                    Studio and business profile management.
+                </li>
+
+                <li>
+                    Photography services and package management.
+                </li>
+
+                <li>
+                    Pricing and service presentation.
+                </li>
+
+                <li>
+                    Equipment information.
+                </li>
+
+                <li>
+                    Client bookings and booking requests.
+                </li>
+
+                <li>
+                    Client galleries and gallery management.
+                </li>
+
+                <li>
+                    Reviews and client feedback.
+                </li>
+
+                <li>
+                    Account and subscription management.
+                </li>
+
+            </ul>
+
+            <div class="notice">
+
+                Professional Studio provides the technology and
+                management platform. Unless explicitly stated
+                otherwise, the actual photography service is
+                provided by the photographer or studio offering it.
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 3 -->
+
+        <section
+            class="terms-section"
+            id="accounts"
+        >
+
+            <span class="section-number">
+                03
+            </span>
+
+            <h2>
+                User Accounts
+            </h2>
+
+            <p>
+                Certain Professional Studio features require
+                an account.
+            </p>
+
+            <p>
+                When creating an account, you agree to provide
+                information that is accurate, current and complete
+                to the best of your knowledge.
+            </p>
+
+            <ul>
+
+                <li>
+                    Keep your account credentials confidential.
+                </li>
+
+                <li>
+                    Do not knowingly allow unauthorized people
+                    to access your account.
+                </li>
+
+                <li>
+                    Keep your account information reasonably
+                    up to date.
+                </li>
+
+                <li>
+                    Notify Professional Studio if you believe
+                    your account has been compromised.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+
+        <!-- 4 -->
+
+        <section
+            class="terms-section"
+            id="eligibility"
+        >
+
+            <span class="section-number">
+                04
+            </span>
+
+            <h2>
+                Eligibility
+            </h2>
+
+            <p>
+                You may use Professional Studio only if you are
+                legally permitted to enter into an agreement
+                under applicable law.
+            </p>
+
+            <p>
+                If you are using Professional Studio on behalf
+                of a business or organization, you represent
+                that you have authority to act on its behalf.
+            </p>
+
+        </section>
+
+
+
+        <!-- 5 -->
+
+        <section
+            class="terms-section"
+            id="portfolio"
+        >
+
+            <span class="section-number">
+                05
+            </span>
+
+            <h2>
+                Portfolio & Studio Content
+            </h2>
+
+            <p>
+                Professional Studio allows photographers to
+                create a public-facing presence containing
+                information such as studio details, portfolio
+                photographs, descriptions, services, packages,
+                pricing, equipment and other business information.
+            </p>
+
+            <p>
+                You are responsible for ensuring that the
+                information displayed on your studio profile
+                is accurate and does not intentionally mislead
+                clients.
+            </p>
+
+            <p>
+                You are also responsible for removing or updating
+                information that is no longer accurate.
+            </p>
+
+        </section>
+
+
+
+        <!-- 6 -->
+
+        <section
+            class="terms-section"
+            id="services"
+        >
+
+            <span class="section-number">
+                06
+            </span>
+
+            <h2>
+                Services & Packages
+            </h2>
+
+            <p>
+                Photographers may create and publish their own
+                photography services, packages, descriptions,
+                prices, availability and related information.
+            </p>
+
+            <p>
+                Professional Studio does not independently guarantee
+                the accuracy, availability, quality, price or
+                suitability of a photographer's services.
+            </p>
+
+            <p>
+                Photographers are responsible for honouring the
+                services and packages they choose to offer,
+                subject to any agreed booking terms.
+            </p>
+
+        </section>
+
+
+
+        <!-- 7 -->
+
+        <section
+            class="terms-section"
+            id="bookings"
+        >
+
+            <span class="section-number">
+                07
+            </span>
+
+            <h2>
+                Bookings
+            </h2>
+
+            <p>
+                Professional Studio may allow clients to submit
+                booking requests for photography services.
+            </p>
+
+            <p>
+                A booking request may include information such as:
+            </p>
+
+            <ul>
+
+                <li>
+                    Client name and contact information.
+                </li>
+
+                <li>
+                    Selected photography service or package.
+                </li>
+
+                <li>
+                    Requested date or dates.
+                </li>
+
+                <li>
+                    Session or event location.
+                </li>
+
+                <li>
+                    Additional requirements or messages.
+                </li>
+
+            </ul>
+
+            <p>
+                A submitted booking request does not necessarily
+                mean that the photographer has accepted the booking.
+                Availability and final confirmation may depend on
+                the photographer.
+            </p>
+
+        </section>
+
+
+
+        <!-- 8 -->
+
+        <section
+            class="terms-section"
+            id="galleries"
+        >
+
+            <span class="section-number">
+                08
+            </span>
+
+            <h2>
+                Client Galleries
+            </h2>
+
+            <p>
+                Professional Studio may provide photographers
+                with tools to create and manage client galleries
+                containing photographs or other media.
+            </p>
+
+            <p>
+                Gallery owners are responsible for determining
+                who should receive access and for using available
+                privacy, password, download and sharing controls
+                appropriately.
+            </p>
+
+            <p>
+                Clients must not access, copy, redistribute,
+                download or use gallery content beyond the
+                permissions granted by the photographer or
+                rights holder.
+            </p>
+
+        </section>
+
+
+
+        <!-- 9 -->
+
+        <section
+            class="terms-section"
+            id="reviews"
+        >
+
+            <span class="section-number">
+                09
+            </span>
+
+            <h2>
+                Reviews & Feedback
+            </h2>
+
+            <p>
+                Professional Studio may allow clients to provide
+                reviews or feedback regarding photography services.
+            </p>
+
+            <p>
+                Reviews should reflect genuine experiences and
+                should not contain unlawful, fraudulent, abusive,
+                threatening or intentionally misleading material.
+            </p>
+
+            <p>
+                Professional Studio may remove or restrict content
+                that violates these Terms or applicable policies.
+            </p>
+
+        </section>
+
+
+
+        <!-- 10 -->
+
+        <section
+            class="terms-section"
+            id="subscriptions"
+        >
+
+            <span class="section-number">
+                10
+            </span>
+
+            <h2>
+                Subscriptions
+            </h2>
+
+            <p>
+                Professional Studio may offer paid subscription
+                plans that provide different levels of storage,
+                features or usage limits.
+            </p>
+
+            <p>
+                Current plan names, prices, storage limits,
+                features and billing information are presented
+                through the applicable Professional Studio
+                purchase or subscription interface.
+            </p>
+
+            <p>
+                Subscription access is dependent on the status
+                of the applicable account and plan.
+            </p>
+
+            <div class="plan-grid">
+
+                <div class="plan-item">
+
+                    <strong>
+                        Starter
+                    </strong>
+
+                    <span>
+                        Entry-level studio management
+                    </span>
+
+                </div>
+
+                <div class="plan-item">
+
+                    <strong>
+                        Professional
+                    </strong>
+
+                    <span>
+                        Expanded studio capabilities
+                    </span>
+
+                </div>
+
+                <div class="plan-item">
+
+                    <strong>
+                        Enterprise
+                    </strong>
+
+                    <span>
+                        Higher capacity and advanced usage
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 11 -->
+
+        <section
+            class="terms-section"
+            id="payments"
+        >
+
+            <span class="section-number">
+                11
+            </span>
+
+            <h2>
+                Payments
+            </h2>
+
+            <p>
+                Paid Professional Studio features may require
+                payment before access is provided or continued.
+            </p>
+
+            <p>
+                Prices and applicable taxes or charges will be
+                displayed through the relevant purchase process
+                where applicable.
+            </p>
+
+            <p>
+                You are responsible for providing accurate
+                billing information and completing payments
+                associated with your selected plan or service.
+            </p>
+
+        </section>
+
+
+
+        <!-- 12 -->
+
+        <section
+            class="terms-section"
+            id="cancellations"
+        >
+
+            <span class="section-number">
+                12
+            </span>
+
+            <h2>
+                Cancellations & Refunds
+            </h2>
+
+            <p>
+                Cancellation and refund eligibility may depend
+                on the specific subscription, booking, service,
+                payment method and applicable policy presented
+                at the time of purchase or booking.
+            </p>
+
+            <p>
+                Photographers may also maintain their own
+                cancellation policies for photography bookings.
+                Those policies should be communicated to clients
+                before the booking is finalized.
+            </p>
+
+            <div class="notice">
+
+                Nothing in these Terms is intended to remove
+                consumer rights that cannot legally be excluded
+                under applicable law.
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 13 -->
+
+        <section
+            class="terms-section"
+            id="content"
+        >
+
+            <span class="section-number">
+                13
+            </span>
+
+            <h2>
+                User Content
+            </h2>
+
+            <p>
+                You retain ownership of photographs, portfolio
+                material, descriptions, business information and
+                other content that you upload to Professional Studio,
+                subject to the rights necessary to operate the
+                platform.
+            </p>
+
+            <p>
+                By uploading content, you grant Professional Studio
+                the limited permission necessary to host, process,
+                display, transmit and otherwise use that content
+                to provide the features you request.
+            </p>
+
+            <p>
+                You are responsible for ensuring that you have the
+                necessary rights, permissions and consents for
+                content and personal information you upload.
+            </p>
+
+        </section>
+
+
+
+        <!-- 14 -->
+
+        <section
+            class="terms-section"
+            id="copyright"
+        >
+
+            <span class="section-number">
+                14
+            </span>
+
+            <h2>
+                Intellectual Property
+            </h2>
+
+            <p>
+                Professional Studio's name, branding, interface,
+                website design, software, original text, graphics,
+                logos and other platform materials are protected
+                by applicable intellectual property laws.
+            </p>
+
+            <p>
+                You may not copy, reproduce, modify, distribute,
+                reverse engineer, sell or commercially exploit
+                Professional Studio materials without appropriate
+                authorization, except where permitted by law.
+            </p>
+
+            <p>
+                Photographs uploaded by photographers remain subject
+                to the rights of their respective owners.
+            </p>
+
+        </section>
+
+
+
+        <!-- 15 -->
+
+        <section
+            class="terms-section"
+            id="privacy"
+        >
+
+            <span class="section-number">
+                15
+            </span>
+
+            <h2>
+                Privacy
+            </h2>
+
+            <p>
+                Information collected through Professional Studio
+                is handled according to our Privacy Policy.
+            </p>
+
+            <p>
+                Our Privacy Policy explains the types of information
+                that may be collected, how information may be used,
+                and how information may be handled in connection
+                with the platform.
+            </p>
+
+            <a
+                href="privacy.html"
+                class="inline-link"
+            >
+                Read our Privacy Policy →
+            </a>
+
+        </section>
+
+
+
+        <!-- 16 -->
+
+        <section
+            class="terms-section"
+            id="third-party"
+        >
+
+            <span class="section-number">
+                16
+            </span>
+
+            <h2>
+                Third-Party Services
+            </h2>
+
+            <p>
+                Professional Studio may rely on or integrate with
+                third-party services for functions such as hosting,
+                authentication, payments, maps or location services,
+                analytics, communication, storage and other technical
+                functionality.
+            </p>
+
+            <p>
+                Third-party services may have their own terms,
+                privacy policies and technical limitations.
+                Your use of those services may therefore also be
+                subject to their respective terms.
+            </p>
+
+        </section>
+
+
+
+        <!-- 17 -->
+
+        <section
+            class="terms-section"
+            id="acceptable-use"
+        >
+
+            <span class="section-number">
+                17
+            </span>
+
+            <h2>
+                Acceptable Use
+            </h2>
+
+            <p>
+                You agree not to misuse Professional Studio.
+            </p>
+
+            <ul>
+
+                <li>
+                    Do not attempt unauthorized access to accounts,
+                    systems or data.
+                </li>
+
+                <li>
+                    Do not upload malicious software or harmful code.
+                </li>
+
+                <li>
+                    Do not interfere with the operation of the platform.
+                </li>
+
+                <li>
+                    Do not use the platform for unlawful activity.
+                </li>
+
+                <li>
+                    Do not impersonate another person or business.
+                </li>
+
+                <li>
+                    Do not intentionally provide fraudulent information.
+                </li>
+
+                <li>
+                    Do not abuse booking, gallery, review or
+                    communication features.
+                </li>
+
+                <li>
+                    Do not attempt to circumvent subscription,
+                    access or security controls.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+
+        <!-- 18 -->
+
+        <section
+            class="terms-section"
+            id="responsibilities"
+        >
+
+            <span class="section-number">
+                18
+            </span>
+
+            <h2>
+                User Responsibilities
+            </h2>
+
+            <p>
+                Photographers are responsible for the photography
+                services they advertise, their prices, availability,
+                communication with clients, delivered work and
+                applicable professional obligations.
+            </p>
+
+            <p>
+                Clients are responsible for providing accurate
+                booking information, respecting photographer
+                policies, paying applicable charges and complying
+                with reasonable venue and session requirements.
+            </p>
+
+            <p>
+                Professional Studio is not a substitute for the
+                professional, contractual or legal relationship
+                between a photographer and their client.
+            </p>
+
+        </section>
+
+
+
+        <!-- 19 -->
+
+        <section
+            class="terms-section"
+            id="referrals"
+        >
+
+            <span class="section-number">
+                19
+            </span>
+
+            <h2>
+                Referral Program
+            </h2>
+
+            <p>
+                Professional Studio may operate a referral program
+                for eligible participants.
+            </p>
+
+            <p>
+                Under the current referral structure, an eligible
+                referral may provide a referred photographer with
+                one month of Professional Studio access without
+                subscription charges.
+            </p>
+
+            <p>
+                After the applicable free period, continued access
+                may require the photographer to purchase an
+                applicable subscription plan. An account may be
+                restricted or frozen when the free period ends
+                without a paid subscription.
+            </p>
+
+            <p>
+                An eligible referrer may receive a commission equal
+                to 60% of the referred photographer's first paid
+                subscription, with the remaining 40% retained by
+                Professional Studio, subject to applicable referral
+                rules and eligibility requirements.
+            </p>
+
+            <div class="notice">
+
+                Referral benefits apply only where the referral
+                satisfies the applicable program requirements.
+                Professional Studio may reject fraudulent,
+                duplicated, self-referred or otherwise invalid
+                referrals.
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 20 -->
+
+        <section
+            class="terms-section"
+            id="availability"
+        >
+
+            <span class="section-number">
+                20
+            </span>
+
+            <h2>
+                Service Availability
+            </h2>
+
+            <p>
+                We aim to keep Professional Studio available and
+                functional, but continuous availability cannot be
+                guaranteed.
+            </p>
+
+            <p>
+                The platform may occasionally be unavailable because
+                of maintenance, updates, infrastructure problems,
+                security events, third-party service interruptions,
+                network failures or circumstances outside our
+                reasonable control.
+            </p>
+
+        </section>
+
+
+
+        <!-- 21 -->
+
+        <section
+            class="terms-section"
+            id="disclaimer"
+        >
+
+            <span class="section-number">
+                21
+            </span>
+
+            <h2>
+                Disclaimer
+            </h2>
+
+            <p>
+                Professional Studio is provided on an
+                "as available" and, to the extent permitted by law,
+                "as is" basis.
+            </p>
+
+            <p>
+                We do not guarantee that the platform will always
+                operate without errors, interruptions or delays,
+                or that all information supplied by users will be
+                accurate.
+            </p>
+
+            <p>
+                Professional Studio does not guarantee the outcome,
+                quality, availability, legality or suitability of
+                photography services offered by independent
+                photographers through the platform.
+            </p>
+
+        </section>
+
+
+
+        <!-- 22 -->
+
+        <section
+            class="terms-section"
+            id="liability"
+        >
+
+            <span class="section-number">
+                22
+            </span>
+
+            <h2>
+                Limitation of Liability
+            </h2>
+
+            <p>
+                To the fullest extent permitted by applicable law,
+                Professional Studio will not be responsible for
+                indirect, incidental, special or consequential
+                losses arising from your use of or inability to
+                use the platform.
+            </p>
+
+            <p>
+                This includes circumstances involving bookings,
+                photographer-client disputes, venue conditions,
+                weather, missed appointments, service quality,
+                user content or third-party services, except where
+                liability cannot lawfully be excluded.
+            </p>
+
+        </section>
+
+
+
+        <!-- 23 -->
+
+        <section
+            class="terms-section"
+            id="indemnification"
+        >
+
+            <span class="section-number">
+                23
+            </span>
+
+            <h2>
+                Indemnification
+            </h2>
+
+            <p>
+                To the extent permitted by applicable law, you agree
+                to be responsible for claims, losses, liabilities,
+                damages and reasonable expenses arising from your
+                unlawful use of Professional Studio, violation of
+                these Terms, or infringement of another person's
+                rights through content or activity associated with
+                your account.
+            </p>
+
+        </section>
+
+
+
+        <!-- 24 -->
+
+        <section
+            class="terms-section"
+            id="termination"
+        >
+
+            <span class="section-number">
+                24
+            </span>
+
+            <h2>
+                Suspension & Termination
+            </h2>
+
+            <p>
+                Professional Studio may restrict, suspend or
+                terminate access where reasonably necessary,
+                including where an account:
+            </p>
+
+            <ul>
+
+                <li>
+                    Violates these Terms.
+                </li>
+
+                <li>
+                    Is involved in fraudulent or abusive activity.
+                </li>
+
+                <li>
+                    Attempts to compromise platform security.
+                </li>
+
+                <li>
+                    Fails to maintain a required paid subscription.
+                </li>
+
+                <li>
+                    Creates material risk to other users or the platform.
+                </li>
+
+            </ul>
+
+            <p>
+                Where appropriate and reasonably possible,
+                we may provide notice before restricting access.
+            </p>
+
+        </section>
+
+
+
+        <!-- 25 -->
+
+        <section
+            class="terms-section"
+            id="changes"
+        >
+
+            <span class="section-number">
+                25
+            </span>
+
+            <h2>
+                Changes to These Terms
+            </h2>
+
+            <p>
+                Professional Studio may update these Terms when
+                our services, business practices, legal obligations
+                or platform features change.
+            </p>
+
+            <p>
+                The latest version will be published on this page
+                together with an updated revision date.
+            </p>
+
+            <p>
+                Your continued use of Professional Studio after
+                an updated version becomes effective constitutes
+                acceptance of the updated Terms to the extent
+                permitted by applicable law.
+            </p>
+
+        </section>
+
+
+
+        <!-- 26 -->
+
+        <section
+            class="terms-section"
+            id="law"
+        >
+
+            <span class="section-number">
+                26
+            </span>
+
+            <h2>
+                Governing Law
+            </h2>
+
+            <p>
+                These Terms are intended to be governed by the laws
+                applicable to Professional Studio and its operating
+                entity, subject to any mandatory consumer or other
+                legal protections that apply to you.
+            </p>
+
+            <div class="notice">
+
+                The final governing-law and jurisdiction wording
+                should be confirmed against the registered legal
+                entity and business location before these Terms are
+                treated as the final legal agreement.
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 27 -->
+
+        <section
+            class="terms-section"
+            id="contact"
+        >
+
+            <span class="section-number">
+                27
+            </span>
+
+            <h2>
+                Contact Information
+            </h2>
+
+            <p>
+                Questions regarding these Terms or Professional
+                Studio may be directed to:
+            </p>
+
+            <div class="contact-card">
+
+                <strong>
+                    Professional Studio
+                </strong>
+
+                <span>
+                    Email:
+                 helloprofessionalstudio@gmail.com
+                </span>
+
+
+                <span>
+                    Email:
+                    bluehorizanlabs@gmail.com
+                </span>
+
+                <span>
+                    Phone:
+                    +91 9529924506
+                </span>
+
+                <span>
+                    Phone:
+                    +91 9309703484
+                </span>
+
+                <span>
+                    Business hours:
+                    Monday - Saturday, 9:00 AM - 9:00 PM
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 28 -->
+
+        <section
+            class="terms-section"
+            id="agreement"
+        >
+
+            <span class="section-number">
+                28
+            </span>
+
+            <h2>
+                Entire Agreement
+            </h2>
+
+            <p>
+                These Terms, together with policies and documents
+                expressly referenced in them, describe the agreement
+                governing your use of Professional Studio.
+            </p>
+
+            <p>
+                If a particular provision is found to be
+                unenforceable, the remaining provisions will
+                continue to apply to the extent permitted by law.
+            </p>
+
+        </section>
+
+
+    </article>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-brand">
+
+            <a
+                href="index.html"
+                class="brand"
+            >
+
+                <span class="brand-mark">
+                    ◇
+                </span>
+
+                <span>
+                    Professional Studio
+                </span>
+
+            </a>
+
+            <p>
+                A professional workspace for modern
+                photography businesses.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Professional Studio.
+            All Rights Reserved.
+        </span>
+
+        <span>
+            Powered by
+            <a
+                href="https://bluehorizanlabs.vercel.app/"
+                target="_blank"
+                rel="noopener"
+            >
+                Bluehorizanlabs
+            </a>
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* =====================================================
+       ELEMENTS
+    ===================================================== */
+
+    const backTop = document.getElementById("backTop");
+
+    const tocLinks = [
+        ...document.querySelectorAll(".toc a")
+    ];
+
+    const sections = [
+        ...document.querySelectorAll(".terms-section")
+    ];
+
+
+    /* =====================================================
+       TABLE OF CONTENTS
+       SMOOTH SCROLL
+    ===================================================== */
+
+    tocLinks.forEach(link => {
+
+        link.addEventListener("click", event => {
+
+            const targetId =
+                link.getAttribute("href");
+
+            if (
+                !targetId ||
+                !targetId.startsWith("#")
+            ) {
+                return;
+            }
+
+            const target =
+                document.querySelector(targetId);
+
+            if (!target) {
+                return;
+            }
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+            /*
+             * Update the URL without causing
+             * another jump.
+             */
+
+            try {
+
+                history.replaceState(
+                    null,
+                    "",
+                    targetId
+                );
+
+            } catch (error) {
+
+                console.warn(
+                    "Unable to update URL:",
+                    error
+                );
+
+            }
+
+        });
+
+    });
+
+
+    /* =====================================================
+       ACTIVE TABLE OF CONTENTS ITEM
+    ===================================================== */
+
+    function updateActiveSection() {
+
+        if (!sections.length) {
+            return;
+        }
+
+        const scrollPosition =
+            window.scrollY + 140;
+
+        let currentSection = sections[0];
+
+        sections.forEach(section => {
+
+            const sectionTop =
+                section.offsetTop;
+
+            if (
+                sectionTop <= scrollPosition
+            ) {
+
+                currentSection = section;
+
+            }
+
+        });
+
+
+        const currentId =
+            currentSection.id;
+
+
+        tocLinks.forEach(link => {
+
+            const linkTarget =
+                link.getAttribute("href");
+
+
+            link.classList.toggle(
+                "active",
+                linkTarget === `#${currentId}`
+            );
+
+        });
+
+    }
+
+
+    /* =====================================================
+       SCROLL EVENT
+    ===================================================== */
+
+    let scrollTicking = false;
+
+    window.addEventListener(
+        "scroll",
+        () => {
+
+            if (scrollTicking) {
+                return;
+            }
+
+            window.requestAnimationFrame(() => {
+
+                updateActiveSection();
+
+                updateBackToTop();
+
+                scrollTicking = false;
+
+            });
+
+            scrollTicking = true;
+
+        },
+        {
+            passive: true
+        }
+    );
+
+
+    /* =====================================================
+       BACK TO TOP
+    ===================================================== */
+
+    function updateBackToTop() {
+
+        if (!backTop) {
+            return;
+        }
+
+        if (window.scrollY > 500) {
+
+            backTop.classList.add("show");
+
+        } else {
+
+            backTop.classList.remove("show");
+
+        }
+
+    }
+
+
+    if (backTop) {
+
+        backTop.addEventListener(
+            "click",
+            () => {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+                try {
+
+                    history.replaceState(
+                        null,
+                        "",
+                        window.location.pathname
+                    );
+
+                } catch (error) {
+
+                    console.warn(
+                        "Unable to reset URL:",
+                        error
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       INITIAL ACTIVE SECTION
+    ===================================================== */
+
+    updateActiveSection();
+
+    updateBackToTop();
+
+
+    /* =====================================================
+       HANDLE DIRECT HASH LINKS
+       Example:
+       terms.html#subscriptions
+    ===================================================== */
+
+    if (window.location.hash) {
+
+        const target =
+            document.querySelector(
+                window.location.hash
+            );
+
+        if (target) {
+
+            /*
+             * Wait for the page layout and fonts
+             * to settle before scrolling.
+             */
+
+            window.requestAnimationFrame(() => {
+
+                setTimeout(() => {
+
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                    updateActiveSection();
+
+                }, 100);
+
+            });
+
+        }
+
+    }
+
+
+    /* =====================================================
+       KEYBOARD ACCESSIBILITY
+       ESCAPE RETURNS FOCUS
+    ===================================================== */
+
+    document.addEventListener(
+        "keydown",
+        event => {
+
+            if (
+                event.key === "Escape" &&
+                document.activeElement
+            ) {
+
+                document.activeElement.blur();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       FOOTER YEAR
+       Optional automatic year handling
+    ===================================================== */
+
+    const footerYear =
+        document.querySelector(
+            "[data-current-year]"
+        );
+
+    if (footerYear) {
+
+        footerYear.textContent =
+            new Date().getFullYear();
+
+    }
+
+
+    /* =====================================================
+       FINAL INITIALIZATION
+    ===================================================== */
+
+    console.log(
+        "Professional Studio Terms page initialized."
+    );
+
+});
+
+</script>
+
+<script src="frontend-core.js"></script>
+<script src="backend-client.js"></script>
+</body>
+
+</html>

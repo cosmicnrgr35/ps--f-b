@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Manage clients and booking history in Professional Studio."><meta name="theme-color" content="#111111">
+<title>Clients | Professional Studio</title>
+<link rel="icon" type="image/png" href="https://i.ibb.co/8g0LT3jZ/logo1-2.png">
+<link rel="stylesheet" href="frontend-core.css"><link rel="stylesheet" href="clients.css">
+</head>
+<body>
+<header class="clients-nav"><a href="user.html" class="brand">Professional Studio</a><nav aria-label="Main navigation"><a href="user.html">Dashboard</a><a href="setup.html">Profile</a><a href="serviceMng.html">Services</a><a href="recentwork.html">Recent Work</a><a href="clientgallery.html">Galleries</a><a href="clients.html" class="active" aria-current="page">Clients</a><a href="bookingMng.html">Bookings</a><a href="subscription.html">Billing</a></nav></header>
+<main class="clients-page">
+<section class="clients-hero"><div><p class="eyebrow">CLIENT MANAGEMENT</p><h1>Your clients</h1><p>Keep client details, booking history and notes together. This local frontend workspace will map cleanly to the backend client records later.</p></div><button class="primary" id="addClientBtn" type="button">+ Add Client</button></section>
+<section class="client-stats" aria-label="Client statistics"><div><span>Total clients</span><strong id="totalClients">0</strong></div><div><span>Active bookings</span><strong id="activeClientBookings">0</strong></div><div><span>Completed work</span><strong id="completedClientBookings">0</strong></div><div><span>Recorded revenue</span><strong id="clientRevenue">₹0</strong></div></section>
+<section class="clients-layout">
+<div class="client-list-card"><div class="toolbar"><label class="sr-only" for="clientSearch">Search clients</label><input id="clientSearch" type="search" placeholder="Search by name, email or phone…" autocomplete="off"><select id="clientFilter" aria-label="Filter clients"><option value="all">All clients</option><option value="active">Active bookings</option><option value="completed">Completed</option></select></div><div id="clientList" class="client-list"></div><div id="clientEmpty" class="empty" hidden><div class="empty-icon">◎</div><h2>No clients yet</h2><p>Clients are synced from booking requests and can also be added manually. Opening a client from a booking or gallery keeps the same client record here.</p><button class="secondary" id="emptyAddClient" type="button">Add a client manually</button></div></div>
+<aside class="client-detail" id="clientDetail" aria-live="polite"><div class="detail-empty"><span>◎</span><h2>Select a client</h2><p>Choose a client to view contact details, booking history and notes.</p></div></aside>
+</section>
+</main>
+<div class="modal-backdrop" id="clientModal" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="clientModalTitle"><button class="modal-close" id="closeClientModal" type="button" aria-label="Close">×</button><p class="eyebrow">CLIENT</p><h2 id="clientModalTitle">Add client</h2><form id="clientForm"><label>Name<input id="clientName" required maxlength="100" autocomplete="name"></label><label>Email<input id="clientEmail" type="email" maxlength="160" autocomplete="email"></label><label>Phone<input id="clientPhone" type="tel" maxlength="30" autocomplete="tel"></label><label>Notes<textarea id="clientNotes" maxlength="1000" rows="5"></textarea></label><div class="modal-actions"><button class="secondary" type="button" id="cancelClient">Cancel</button><button class="primary" type="submit">Save Client</button></div></form></div></div>
+<script src="frontend-core.js"></script><script src="clients.js"></script>
+<script src="backend-client.js"></script>
+</body></html>

@@ -1,0 +1,25 @@
+{
+  "name": "photo-studio",
+  "version": "1.0.0",
+  "description": "a PaaS for photographers",
+  "homepage": "https://github.com/nrgr35/PROFESSIONAL-STUDIO#readme",
+  "bugs": {
+    "url": "https://github.com/nrgr35/PROFESSIONAL-STUDIO/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nrgr35/PROFESSIONAL-STUDIO.git"
+  },
+  "license": "ISC",
+  "author": "Magarevedant",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --check api/_lib/auth.mjs && node --check api/data.mjs && node --check api/state.mjs && node --check api/sync-state.mjs && node --check api/public-profile.mjs && node --check api/public-booking.mjs && node --check api/login.mjs && node --check api/signup.mjs && node --check backend-client.js && node --check api/auth/forgot-password.mjs && node --check api/auth/reset-password.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.111.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}

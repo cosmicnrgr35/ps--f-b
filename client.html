@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Professional photography portfolio, services, recent work and client reviews."
+    >
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Professional Studio | Portfolio</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="https://i.ibb.co/8g0LT3jZ/logo1-2.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="client.css">
+<link rel="stylesheet" href="frontend-core.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar" id="top">
+
+        <a
+            href="#top"
+            class="logo"
+            aria-label="Back to top"
+        >
+            Photographer
+        </a>
+
+        <nav aria-label="Main Navigation">
+
+            <a href="#portfolio">
+                Portfolio
+            </a>
+
+            <a href="#services">
+                Services
+            </a>
+
+            <a href="#reviews">
+                Reviews
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section
+            class="hero"
+            aria-labelledby="heroTitle"
+        >
+
+            <div class="hero-content">
+
+                <h1 id="heroTitle">
+                    Capturing Real Stories
+                </h1>
+
+                <p>
+                    Wedding • Portrait • Events • Commercial • + More
+                </p>
+
+                <a
+                    href="#services"
+                    class="book-btn large"
+                >
+                    Book a Service
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PORTFOLIO ================= -->
+
+        <section
+            id="portfolio"
+            class="section"
+            aria-labelledby="portfolioTitle"
+        >
+
+            <h2 id="portfolioTitle" class="visually-hidden">
+                Portfolio
+            </h2>
+
+            <!-- Experience -->
+
+            <div
+                class="experience"
+                id="experienceSection"
+            >
+
+                <article
+                    class="exp-box"
+                    id="sessionsExperience"
+                    hidden
+                >
+
+                    <h3>
+                        Sessions Completed
+                    </h3>
+
+                    <div
+                        class="meter"
+                        role="progressbar"
+                        aria-label="Sessions completed"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="0"
+                    >
+
+                        <div
+                            class="meter-fill"
+                            data-meter="sessions"
+                        ></div>
+
+                    </div>
+
+                    <p id="sessionsExperienceText">
+                        Information not provided
+                    </p>
+
+                </article>
+
+
+                <article
+                    class="exp-box"
+                    id="yearsExperience"
+                    hidden
+                >
+
+                    <h3>
+                        Experience
+                    </h3>
+
+                    <div
+                        class="meter"
+                        role="progressbar"
+                        aria-label="Photography experience"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="0"
+                    >
+
+                        <div
+                            class="meter-fill"
+                            data-meter="experience"
+                        ></div>
+
+                    </div>
+
+                    <p id="yearsExperienceText">
+                        Information not provided
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <!-- Portfolio / About -->
+
+            <div class="portfolio-block">
+
+                <img
+                    src="https://i.ibb.co/nsfMTd3B/img1.png"
+                    alt="Featured photography portfolio image"
+                    loading="lazy"
+                    decoding="async"
+                    width="1200"
+                    height="800"
+                >
+
+                <div class="portfolio-text">
+
+                    <h2>
+                        ABOUT ME
+                    </h2>
+
+                    <p id="aboutText">
+                        No profile description has been added yet.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EQUIPMENT ================= -->
+
+        <section
+            id="equipment"
+            class="equipment-section"
+            aria-labelledby="equipmentTitle"
+        >
+
+            <div class="equipment-container">
+
+                <h2 id="equipmentTitle">
+                    Professional Equipment
+                </h2>
+
+                <p>
+                    Equipment information provided by the photographer.
+                </p>
+
+                <div
+                    class="equipment-grid"
+                    id="equipmentGrid"
+                    aria-live="polite"
+                >
+                    <!-- Equipment categories loaded dynamically -->
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SERVICES ================= -->
+
+        <section
+            id="services"
+            class="section"
+            aria-labelledby="servicesTitle"
+        >
+
+            <h2
+                id="servicesTitle"
+                class="center"
+            >
+                Photography Services
+            </h2>
+
+            <p class="pricing-subtitle">
+                Explore available photography services and choose the option
+                that best fits your requirements.
+            </p>
+
+            <div
+                id="servicesContainer"
+                class="pricing-grid"
+                aria-live="polite"
+            >
+                <!-- Services loaded dynamically -->
+            </div>
+
+        </section>
+
+
+        <!-- ================= RECENT WORK ================= -->
+
+        <section
+            id="works"
+            class="section light"
+            aria-labelledby="worksTitle"
+        >
+
+            <h2
+                id="worksTitle"
+                class="center"
+            >
+                My Recent Work
+            </h2>
+
+            <div
+                class="work-grid"
+                id="recentWorkPreview"
+                aria-live="polite"
+            >
+                <!-- Recent work loaded dynamically -->
+            </div>
+
+
+            <div
+                id="recentWorkEmpty"
+                class="recent-work-empty"
+                hidden
+            >
+
+                <div class="empty-state-icon">
+                    <i class="fa-regular fa-images" aria-hidden="true"></i>
+                </div>
+
+                <h3>
+                    No recent work published yet
+                </h3>
+
+                <p>
+                    Published portfolio work will appear here when this studio adds an album.
+                </p>
+
+            </div>
+
+
+            <div class="cta-container">
+
+                <a
+                    href="gallery.html"
+                    class="book-btn large"
+                >
+                    View Full Recent Work
+                </a>
+
+            </div>
+
+
+            <div class="cta-container">
+
+                <a
+                    href="#services"
+                    class="book-btn large"
+                >
+                    Book a Service
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= REVIEWS ================= -->
+
+        <section
+            id="reviews"
+            class="section reviews-section"
+            aria-labelledby="reviewsTitle"
+        >
+
+            <div class="reviews-container">
+
+                <h2
+                    id="reviewsTitle"
+                    class="center"
+                >
+                    Client Reviews
+                </h2>
+
+
+                <div class="reviews-summary">
+
+                    <div class="reviews-rating">
+
+                        <span
+                            id="reviewsAverageRating"
+                            class="reviews-average-rating"
+                        >
+                            0.0
+                        </span>
+
+                        <div
+                            id="reviewsAverageStars"
+                            class="review-stars"
+                            aria-label="No reviews yet"
+                        >
+                            <i class="fa-regular fa-star" aria-hidden="true"></i>
+                            <i class="fa-regular fa-star" aria-hidden="true"></i>
+                            <i class="fa-regular fa-star" aria-hidden="true"></i>
+                            <i class="fa-regular fa-star" aria-hidden="true"></i>
+                            <i class="fa-regular fa-star" aria-hidden="true"></i>
+                        </div>
+
+                        <span
+                            id="reviewsCount"
+                            class="reviews-count"
+                        >
+                            No reviews yet
+                        </span>
+
+                    </div>
+
+
+                    <div class="reviews-action">
+
+                        <button
+                            type="button"
+                            id="openReviewModalBtn"
+                            class="book-btn"
+                        >
+                            Leave a Review
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="reviewsList"
+                    class="reviews-list"
+                    aria-live="polite"
+                >
+                    <!-- Reviews loaded dynamically -->
+                </div>
+
+
+                <div
+                    id="reviewsEmptyState"
+                    class="reviews-empty-state"
+                    hidden
+                >
+
+                    <div class="reviews-empty-icon">
+                        <i
+                            class="fa-regular fa-comment"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+
+                    <h3>
+                        No Client Reviews Yet
+                    </h3>
+
+                    <p>
+                        Be the first client to share your experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= REVIEW MODAL ================= -->
+
+        <div
+            id="reviewModal"
+            class="review-modal"
+            hidden
+            aria-hidden="true"
+        >
+
+            <div
+                class="review-modal-backdrop"
+                data-close-review-modal
+                aria-hidden="true"
+            ></div>
+
+
+            <div
+                class="review-modal-dialog"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="reviewModalTitle"
+                tabindex="-1"
+            >
+
+                <div class="review-modal-header">
+
+                    <div>
+
+                        <h2 id="reviewModalTitle">
+                            Leave a Review
+                        </h2>
+
+                        <p>
+                            Share your experience with this photographer.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="review-modal-close"
+                        id="closeReviewModalBtn"
+                        aria-label="Close review form"
+                    >
+                        <i
+                            class="fa-solid fa-xmark"
+                            aria-hidden="true"
+                        ></i>
+                    </button>
+
+                </div>
+
+
+                <!-- ================= REVIEW FORM ================= -->
+
+                <form
+                    id="reviewForm"
+                    class="review-form"
+                    novalidate
+                >
+
+                    <div class="review-form-group">
+
+                        <label for="reviewClientName">
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="reviewClientName"
+                            name="clientName"
+                            placeholder="Enter your name"
+                            maxlength="80"
+                            autocomplete="name"
+                            required
+                            aria-describedby="reviewClientNameError"
+                        >
+
+                        <small
+                            id="reviewClientNameError"
+                            class="review-field-error"
+                        ></small>
+
+                    </div>
+
+
+                    <div class="review-form-group">
+
+                        <label for="reviewClientEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="reviewClientEmail"
+                            name="email"
+                            placeholder="Enter your email"
+                            maxlength="150"
+                            autocomplete="email"
+                            required
+                            aria-describedby="reviewClientEmailError"
+                        >
+
+                        <small
+                            id="reviewClientEmailError"
+                            class="review-field-error"
+                        ></small>
+
+                    </div>
+
+
+                    <div class="review-form-group">
+
+                        <label>
+                            Your Rating
+                        </label>
+
+                        <div
+                            id="reviewRating"
+                            class="review-rating-input"
+                            role="radiogroup"
+                            aria-label="Choose a rating from one to five stars"
+                        >
+
+                            <button
+                                type="button"
+                                class="rating-star"
+                                data-rating="1"
+                                aria-label="1 star"
+                                aria-checked="false"
+                                role="radio"
+                            >
+                                <i class="fa-regular fa-star" aria-hidden="true"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="rating-star"
+                                data-rating="2"
+                                aria-label="2 stars"
+                                aria-checked="false"
+                                role="radio"
+                            >
+                                <i class="fa-regular fa-star" aria-hidden="true"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="rating-star"
+                                data-rating="3"
+                                aria-label="3 stars"
+                                aria-checked="false"
+                                role="radio"
+                            >
+                                <i class="fa-regular fa-star" aria-hidden="true"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="rating-star"
+                                data-rating="4"
+                                aria-label="4 stars"
+                                aria-checked="false"
+                                role="radio"
+                            >
+                                <i class="fa-regular fa-star" aria-hidden="true"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="rating-star"
+                                data-rating="5"
+                                aria-label="5 stars"
+                                aria-checked="false"
+                                role="radio"
+                            >
+                                <i class="fa-regular fa-star" aria-hidden="true"></i>
+                            </button>
+
+                        </div>
+
+                        <input
+                            type="hidden"
+                            id="reviewRatingValue"
+                            name="rating"
+                            value=""
+                        >
+
+                        <small
+                            id="reviewRatingError"
+                            class="review-field-error"
+                        ></small>
+
+                    </div>
+
+
+                    <div class="review-form-group">
+
+                        <label for="reviewText">
+                            Your Review
+                        </label>
+
+                        <textarea
+                            id="reviewText"
+                            name="review"
+                            rows="5"
+                            maxlength="1000"
+                            placeholder="Tell us about your experience..."
+                            required
+                            aria-describedby="reviewTextError reviewCharacterCount"
+                        ></textarea>
+
+                        <div class="review-text-meta">
+
+                            <small
+                                id="reviewTextError"
+                                class="review-field-error"
+                            ></small>
+
+                            <span id="reviewCharacterCount">
+                                0 / 1000
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="reviewFormMessage"
+                        class="review-form-message"
+                        role="alert"
+                        hidden
+                    ></div>
+
+
+                    <button
+                        type="submit"
+                        id="submitReviewBtn"
+                        class="book-btn review-submit-btn"
+                    >
+                        Submit Review
+                    </button>
+
+                </form>
+
+
+                <!-- ================= ALREADY REVIEWED ================= -->
+
+                <div
+                    id="reviewAlreadySubmitted"
+                    class="review-already-submitted"
+                    hidden
+                >
+
+                    <div class="review-status-icon">
+                        <i
+                            class="fa-solid fa-check"
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+
+                    <h3>
+                        Review Already Submitted
+                    </h3>
+
+                    <p>
+                        A review has already been submitted using this email
+                        address. Only one review can be submitted per client.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="book-btn"
+                        data-close-review-modal
+                    >
+                        Close
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section
+            id="contact"
+            class="section"
+            aria-labelledby="contactTitle"
+        >
+
+            <h2
+                id="contactTitle"
+                class="center"
+            >
+                Contact
+            </h2>
+
+
+            <div class="contact-info">
+
+                <p>
+                    <strong>Photographer:</strong>
+                    <span id="photographerName">
+                        Photographer
+                    </span>
+                </p>
+
+
+                <p>
+                    <strong>Studio:</strong>
+                    <span id="photographerStudio">
+                        Studio name not provided
+                    </span>
+                </p>
+
+
+                <p>
+                    <strong>Phone:</strong>
+                    <span id="profilePhone">
+                        Phone not provided
+                    </span>
+                </p>
+
+
+                <p>
+                    <strong>Email:</strong>
+                    <span id="profileEmail">
+                        Email not provided
+                    </span>
+                </p>
+
+
+                <p>
+                    <strong>Location:</strong>
+                    <span id="profileLocation">
+                        Location not provided
+                    </span>
+                </p>
+
+            </div>
+
+
+            <div
+                class="social-links"
+                aria-label="Social media links"
+            >
+
+                <a
+                    href="#"
+                    data-social="instagram"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    hidden
+                >
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    <span>Instagram</span>
+                </a>
+
+
+                <a
+                    href="#"
+                    data-social="facebook"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                    hidden
+                >
+                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                    <span>Facebook</span>
+                </a>
+
+
+                <a
+                    href="#"
+                    data-social="youtube"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                    hidden
+                >
+                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                    <span>YouTube</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Professional Studio. All rights reserved.
+        </p>
+
+        <p>
+            Powered by
+            <a
+                href="https://bluehorizanlabs.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Bluehorizanlabs
+            </a>
+        </p>
+
+    </footer>
+
+
+    <script src="client.js"></script>
+
+<script src="frontend-core.js"></script>
+<script src="backend-client.js"></script>
+</body>
+</html>

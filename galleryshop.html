@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery Shop | Professional Studio</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="https://i.ibb.co/8g0LT3jZ/logo1-2.png"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="galleryshop.css">
+<link rel="stylesheet" href="frontend-core.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         NAVBAR
+    ========================================================== -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="user.html" class="brand">
+                <span class="brand-mark">PS</span>
+                <span class="brand-name">Professional Studio</span>
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="user.html">
+                    Dashboard
+                </a>
+
+                <a href="clientgallery.html">
+                    My Galleries
+                </a>
+
+                <a href="galleryshop.html" class="active-shop">
+                    Gallery Shop
+                </a>
+
+                <a href="#">
+                    Clients
+                </a>
+
+                <a href="#">
+                    Analytics
+                </a>
+
+                <a href="#">
+                    Billing
+                </a>
+
+                <a href="#">
+                    Settings
+                </a>
+
+            </nav>
+
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+
+        <div class="mobile-menu" id="mobileMenu">
+
+            <a href="user.html">
+                Dashboard
+            </a>
+
+            <a href="clientgallery.html">
+                My Galleries
+            </a>
+
+            <a href="galleryshop.html" class="active">
+                Gallery Shop
+            </a>
+
+            <a href="#">
+                Clients
+            </a>
+
+            <a href="subscription.html">
+                Billing
+            </a>
+
+           <!-- <a href="">
+                Settings
+            </a>-->
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         MAIN
+    ========================================================== -->
+
+    <main>
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    PROFESSIONAL STUDIO · GALLERY SHOP
+                </span>
+
+                <p>
+                    Create a private online gallery for your clients,
+                    store their photos and videos, and share everything
+                    through one simple link.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             GALLERY BUILDER
+        ====================================================== -->
+
+        <section class="shop-section">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    BUILD YOUR GALLERY
+                </span>
+
+                <h2>
+                    Choose what you need.
+                </h2>
+
+                <p>
+                    Select your storage and gallery duration.
+                    Your total updates automatically.
+                </p>
+
+            </div>
+
+
+            <div class="shop-grid">
+
+                <!-- =================================================
+                     LEFT BUILDER
+                ================================================== -->
+
+                <div class="builder-card">
+
+                    <!-- STORAGE -->
+
+                    <div class="builder-block">
+
+                        <div class="block-header">
+
+                            <div class="block-header-main">
+
+                                <span class="block-number">
+                                    01
+                                </span>
+
+                                <div>
+
+                                    <h3>
+                                        Storage
+                                    </h3>
+
+                                    <p>
+                                        Choose how much space your gallery needs.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <span class="storage-unit">
+                                GB
+                            </span>
+
+                        </div>
+
+
+                        <div class="storage-control">
+
+                            <button
+                                type="button"
+                                class="step-btn"
+                                id="decreaseStorage"
+                                aria-label="Decrease storage"
+                            >
+                                −
+                            </button>
+
+
+                            <div class="storage-display">
+
+                                <strong id="storageValue">
+                                    100
+                                </strong>
+
+                                <span>
+                                    GB
+                                </span>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="step-btn"
+                                id="increaseStorage"
+                                aria-label="Increase storage"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+
+                        <div class="slider-wrapper">
+
+                            <input
+                                type="range"
+                                id="storageSlider"
+                                min="10"
+                                max="1000"
+                                step="10"
+                                value="100"
+                                aria-label="Gallery storage"
+                            >
+
+                            <div class="slider-labels">
+
+                                <span>
+                                    10 GB
+                                </span>
+
+                                <span>
+                                    1 TB
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DURATION -->
+
+                    <div class="builder-block duration-block">
+
+                        <div class="block-header">
+
+                            <div class="block-header-main">
+
+                                <span class="block-number">
+                                    02
+                                </span>
+
+                                <div>
+
+                                    <h3>
+                                        Gallery duration
+                                    </h3>
+
+                                    <p>
+                                        Choose how long your gallery stays online.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="duration-options">
+
+                            <button
+                                type="button"
+                                class="duration-option"
+                                data-duration="3"
+                            >
+
+                                <span class="duration-months">
+                                    3
+                                </span>
+
+                                <span class="duration-label">
+                                    Months
+                                </span>
+
+                                <span class="duration-rate">
+                                    ₹2.25 / GB / month
+                                </span>
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="duration-option selected popular"
+                                data-duration="6"
+                            >
+
+                                <span class="popular-badge">
+                                    POPULAR
+                                </span>
+
+                                <span class="duration-months">
+                                    6
+                                </span>
+
+                                <span class="duration-label">
+                                    Months
+                                </span>
+
+                                <span class="duration-rate">
+                                    ₹2.25 / GB / month
+                                </span>
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="duration-option"
+                                data-duration="12"
+                            >
+
+                                <span class="duration-months">
+                                    12
+                                </span>
+
+                                <span class="duration-label">
+                                    Months
+                                </span>
+
+                                <span class="duration-rate">
+                                    ₹2.25 / GB / month
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FEATURES -->
+
+                    <div class="builder-block features-block">
+
+                        <div class="block-header">
+
+                            <div class="block-header-main">
+
+                                <span class="block-number">
+                                    03
+                                </span>
+
+                                <div>
+
+                                    <h3>
+                                        Everything you need
+                                    </h3>
+
+                                    <p>
+                                        Your gallery includes:
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="features-grid">
+
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Private client gallery</span>
+                            </div>
+
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Photo &amp; video storage</span>
+                            </div>
+
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Client downloads</span>
+                            </div>
+
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Password protection</span>
+                            </div>
+
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Shareable gallery link</span>
+                            </div>
+
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Automatic expiry</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     RIGHT SUMMARY
+                ================================================== -->
+
+                <aside class="summary-card">
+
+                    <div class="summary-top">
+
+                        <span class="summary-eyebrow">
+                            YOUR GALLERY
+                        </span>
+
+                        <h2>
+                            Ready when<br>
+                            you are.
+                        </h2>
+
+                    </div>
+
+
+                    <div class="summary-details">
+
+                        <div class="summary-row">
+
+                            <span>
+                                Storage
+                            </span>
+
+                            <strong id="summaryStorage">
+                                100 GB
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Duration
+                            </span>
+
+                            <strong id="summaryDuration">
+                                6 months
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Price
+                            </span>
+
+                            <strong>
+                                ₹2.25 / GB / month
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-total">
+
+                        <span>
+                            TOTAL
+                        </span>
+
+                        <div class="price">
+
+                            <span>
+                                ₹
+                            </span>
+
+                            <strong id="totalPrice">
+                                1,350
+                            </strong>
+
+                        </div>
+
+                        <p>
+                            One-time payment
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="purchase-btn"
+                        id="purchaseBtn"
+                    >
+
+                        <span>
+                            Continue to Checkout
+                        </span>
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+
+                    <p class="secure-note">
+                        Secure checkout · Gallery activates after payment
+                    </p>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             HOW IT WORKS
+        ====================================================== -->
+
+        <section class="process-section">
+
+            <div class="process-inner">
+
+                <div class="section-heading process-heading">
+
+                    <span class="section-label">
+                        HOW IT WORKS
+                    </span>
+
+                    <h2>
+                        From camera to client.
+                    </h2>
+
+                    <p>
+                        A simple workflow designed around how
+                        photographers actually work.
+                    </p>
+
+                </div>
+
+
+                <div class="process-grid">
+
+                    <div class="process-item">
+                        <span class="process-number">01</span>
+                        <h3>Choose storage</h3>
+                        <p>
+                            Select the amount of storage
+                            your project requires.
+                        </p>
+                    </div>
+
+                    <div class="process-item">
+                        <span class="process-number">02</span>
+                        <h3>Choose duration</h3>
+                        <p>
+                            Decide how long your client's
+                            gallery should stay online.
+                        </p>
+                    </div>
+
+                    <div class="process-item">
+                        <span class="process-number">03</span>
+                        <h3>Upload everything</h3>
+                        <p>
+                            Add the photos and videos
+                            from your project.
+                        </p>
+                    </div>
+
+                    <div class="process-item">
+                        <span class="process-number">04</span>
+                        <h3>Set password</h3>
+                        <p>
+                            Set a password for your client's
+                            gallery to keep it private and secure.
+                        </p>
+                    </div>
+
+                    <div class="process-item">
+                        <span class="process-number">05</span>
+                        <h3>Share the gallery</h3>
+                        <p>
+                            Give your client their private
+                            gallery link and password.
+                        </p>
+                    </div>
+
+                    <div class="process-item">
+                        <span class="process-number">06</span>
+                        <h3>Automatic expiry</h3>
+                        <p>
+                            When the selected period ends,
+                            the gallery automatically expires.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             INFO
+        ====================================================== -->
+
+        <section class="info-section">
+
+            <div class="info-card">
+
+                <div class="info-content">
+
+                    <span class="section-label">
+                        BUILT FOR PHOTOGRAPHERS
+                    </span>
+
+                    <h2>
+                        Your work deserves<br>
+                        a proper delivery experience.
+                    </h2>
+
+                    <p>
+                        Professional Studio gives you one clean
+                        place to deliver finished work to your clients
+                        without relying on scattered links, drives,
+                        or temporary file-sharing services.
+                    </p>
+
+                </div>
+
+
+                <div class="info-stat">
+
+                    <strong>
+                        01
+                    </strong>
+
+                    <span>
+                        gallery<br>
+                        purchase
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+
+                <a href="user.html" class="brand">
+
+                    <span class="brand-mark">
+                        PS
+                    </span>
+
+                    <span class="brand-name">
+                        Professional Studio
+                    </span>
+
+                </a>
+
+                <p>
+                    A simpler way to run your photography business.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div>
+
+                    <span>PRODUCT</span>
+
+                    <a href="user.html">
+                        Dashboard
+                    </a>
+
+                    <a href="clientgallery.html">
+                        Galleries
+                    </a>
+
+                    <a href="#">
+                        Clients
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <span>ACCOUNT</span>
+
+                    <a href="#">
+                        Billing
+                    </a>
+
+                    <a href="#">
+                        Settings
+                    </a>
+
+                    <a href="#">
+                        Support
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+                <p>
+
+                © 2026 Professional Studio. All Rights Reserved.
+
+            </p>
+
+
+        <p>
+            Powered by <a href="https://bluehorizanlabs.vercel.app/" target="_blank"> Bluehorizanlabs</a> 
+        </p>
+    
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         CHECKOUT MODAL
+    ========================================================== -->
+
+    <div
+        class="checkout-overlay"
+        id="checkoutOverlay"
+        aria-hidden="true"
+    >
+
+        <div
+            class="checkout-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="checkoutTitle"
+        >
+
+            <div class="checkout-header">
+
+                <div>
+
+                    <span class="checkout-eyebrow">
+                        GALLERY SHOP
+                    </span>
+
+                    <h2 id="checkoutTitle">
+                        Review your gallery.
+                    </h2>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="modal-close"
+                    id="closeCheckout"
+                    aria-label="Close checkout"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="checkout-body">
+
+                <div class="checkout-summary-box">
+
+                    <div class="checkout-summary-heading">
+
+                        <span>
+                            ORDER SUMMARY
+                        </span>
+
+                        <small>
+                            One-time payment
+                        </small>
+
+                    </div>
+
+
+                    <div class="checkout-summary-row">
+
+                        <span>
+                            Storage
+                        </span>
+
+                        <strong id="checkoutStorage">
+                            100 GB
+                        </strong>
+
+                    </div>
+
+
+                    <div class="checkout-summary-row">
+
+                        <span>
+                            Gallery duration
+                        </span>
+
+                        <strong id="checkoutDuration">
+                            6 months
+                        </strong>
+
+                    </div>
+
+
+                    <div class="checkout-summary-row">
+
+                        <span>
+                            Storage rate
+                        </span>
+
+                        <strong>
+                            ₹2.25 / GB / month
+                        </strong>
+
+                    </div>
+
+
+                    <div class="checkout-total-row">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="checkoutTotal">
+                            ₹1,350
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="checkout-notice">
+
+                    <span class="notice-icon">
+                        ✓
+                    </span>
+
+                    <p>
+                        Your gallery will be created after checkout
+                        and will appear in <strong>My Galleries</strong>.
+                    </p>
+
+                </div>
+
+
+                <div class="payment-section">
+
+                    <div class="payment-heading">
+
+                        <span>
+                            PAYMENT
+                        </span>
+
+                        <small>
+                            Frontend demo
+                        </small>
+
+                    </div>
+
+
+                    <div class="payment-method">
+
+                        <div class="payment-method-icon">
+                            ₹
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Razorpay Checkout
+                            </strong>
+
+                            <span>
+                                UPI · Cards · Net Banking · Wallets
+                            </span>
+
+                        </div>
+
+                        <span class="payment-check">
+                            ✓
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p class="checkout-disclaimer">
+                    This frontend currently simulates successful payment.
+                    Production checkout will be connected to Razorpay
+                    with server-side payment verification.
+                </p>
+
+            </div>
+
+
+            <div class="checkout-footer">
+
+                <button
+                    type="button"
+                    class="checkout-cancel"
+                    id="cancelCheckout"
+                >
+                    Back
+                </button>
+
+                <button
+                    type="button"
+                    class="checkout-confirm"
+                    id="confirmPurchase"
+                >
+
+                    <span>
+                        Confirm Purchase
+                    </span>
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         SUCCESS OVERLAY
+    ========================================================== -->
+
+    <div
+        class="success-overlay"
+        id="successOverlay"
+        aria-hidden="true"
+    >
+
+        <div class="success-card">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <span class="success-eyebrow">
+                PURCHASE COMPLETE
+            </span>
+
+            <h2>
+                Your gallery is ready.
+            </h2>
+
+            <p id="successMessage">
+                Your gallery has been created and is ready to set up.
+            </p>
+
+            <div class="success-details">
+
+                <div>
+                    <span>Storage</span>
+                    <strong id="successStorage">100 GB</strong>
+                </div>
+
+                <div>
+                    <span>Duration</span>
+                    <strong id="successDuration">6 months</strong>
+                </div>
+
+                <div>
+                    <span>Total</span>
+                    <strong id="successTotal">₹1,350</strong>
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                class="success-button"
+                id="openGalleryBtn"
+            >
+                Open My Galleries →
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="galleryshop.js"></script>
+
+<script src="frontend-core.js"></script>
+<script src="backend-client.js"></script>
+</body>
+</html>

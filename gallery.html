@@ -1,0 +1,3608 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>Recent Work | Photographer</title>
+
+<link
+    rel="icon"
+    type="image/png"
+    href="https://i.ibb.co/8g0LT3jZ/logo1-2.png">
+
+<style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Helvetica Neue", Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f7f7f7;
+    color:#111;
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+button,
+a{
+    -webkit-tap-highlight-color:transparent;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:#fff;
+
+    border-bottom:1px solid #e5e5e5;
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:700;
+    letter-spacing:-.3px;
+}
+
+.navbar nav{
+    display:flex;
+    gap:30px;
+}
+
+.navbar nav a{
+    text-decoration:none;
+    color:#111;
+    font-weight:500;
+    transition:.3s ease;
+}
+
+.navbar nav a:hover{
+    color:#777;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.gallery-hero{
+    min-height:52vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.48),
+            rgba(0,0,0,.48)
+        ),
+        url("hero-gallery.jpg")
+        center/cover no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+}
+
+.hero-content{
+    width:90%;
+    max-width:850px;
+
+    text-align:center;
+    color:#fff;
+}
+
+.hero-content h1{
+    font-size:3.4rem;
+    line-height:1.15;
+
+    margin-bottom:18px;
+
+    letter-spacing:-1px;
+}
+
+.hero-content p{
+    font-size:1.1rem;
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:rgba(255,255,255,.9);
+}
+
+
+/* =========================================================
+   RECENT WORK SECTION
+========================================================= */
+
+.recent-work{
+    width:90%;
+    max-width:1400px;
+
+    margin:70px auto 90px;
+}
+
+.section-heading{
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.section-heading h2{
+    font-size:2rem;
+
+    margin-bottom:8px;
+}
+
+.section-heading p{
+    color:#666;
+
+    font-size:.98rem;
+}
+
+
+/* =========================================================
+   ALBUM GRID
+========================================================= */
+
+.album-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0,1fr));
+
+    gap:25px;
+}
+
+
+/* =========================================================
+   ALBUM CARD
+========================================================= */
+
+.album-card{
+    background:#fff;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.07);
+
+    cursor:pointer;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.album-card:hover{
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.13);
+}
+
+
+/* =========================================================
+   ALBUM COVER
+========================================================= */
+
+.album-cover{
+    position:relative;
+
+    width:100%;
+    height:270px;
+
+    overflow:hidden;
+
+    background:#eee;
+}
+
+.album-cover img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:
+        transform .45s ease;
+}
+
+.album-card:hover .album-cover img{
+    transform:scale(1.05);
+}
+
+
+/* =========================================================
+   PHOTO COUNT
+========================================================= */
+
+.photo-count{
+    position:absolute;
+
+    top:15px;
+    right:15px;
+
+    padding:6px 11px;
+
+    border-radius:20px;
+
+    background:rgba(0,0,0,.65);
+
+    color:#fff;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    backdrop-filter:blur(5px);
+}
+
+
+/* =========================================================
+   ALBUM CONTENT
+========================================================= */
+
+.album-content{
+    padding:20px 21px 22px;
+}
+
+.album-content h3{
+    font-size:1.15rem;
+
+    margin-bottom:7px;
+}
+
+.album-content p{
+    color:#777;
+
+    font-size:.9rem;
+
+    margin-bottom:16px;
+}
+
+.view-album{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    color:#111;
+
+    font-size:.92rem;
+
+    font-weight:600;
+
+    transition:.3s ease;
+}
+
+.view-album span{
+    transition:.3s ease;
+}
+
+.album-card:hover .view-album{
+    color:#555;
+}
+
+.album-card:hover .view-album span{
+    transform:translateX(4px);
+}
+
+
+/* =========================================================
+   ALBUM VIEWER
+========================================================= */
+
+.album-viewer{
+    display:none;
+
+    width:90%;
+    max-width:1400px;
+
+    margin:0 auto 90px;
+
+    animation:fadeIn .35s ease;
+}
+
+.album-viewer.active{
+    display:block;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   VIEWER HEADER
+========================================================= */
+
+.viewer-header{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+    gap:20px;
+}
+
+.viewer-title h2{
+    font-size:2rem;
+
+    margin-bottom:5px;
+}
+
+.viewer-title p{
+    color:#666;
+
+    font-size:.95rem;
+}
+
+.close-album{
+    border:none;
+
+    background:#111;
+
+    color:#fff;
+
+    padding:11px 20px;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    transition:.3s ease;
+}
+
+.close-album:hover{
+    background:#333;
+}
+
+
+/* =========================================================
+   MASONRY GALLERY
+========================================================= */
+
+.gallery-grid{
+    column-count:4;
+
+    column-gap:20px;
+}
+
+.gallery-item{
+    break-inside:avoid;
+
+    margin-bottom:20px;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    background:#fff;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.07);
+
+    cursor:pointer;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.gallery-item:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 16px 35px rgba(0,0,0,.14);
+}
+
+.gallery-item img{
+    width:100%;
+    height:auto;
+
+    display:block;
+
+    transition:
+        transform .4s ease;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.035);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty-gallery{
+    padding:60px 20px;
+
+    text-align:center;
+
+    background:#fff;
+
+    border-radius:15px;
+
+    color:#777;
+
+    width:100%;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.gallery-cta{
+    padding:70px 8%;
+
+    text-align:center;
+
+    background:#fff;
+
+    border-top:1px solid #eee;
+}
+
+.gallery-cta h2{
+    margin-bottom:12px;
+
+    font-size:2rem;
+}
+
+.gallery-cta p{
+    color:#666;
+
+    margin-bottom:28px;
+}
+
+.book-btn{
+    display:inline-block;
+
+    background:#111;
+
+    color:#fff;
+
+    padding:14px 32px;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    transition:.3s ease;
+}
+
+.book-btn:hover{
+    background:#333;
+
+    transform:translateY(-2px);
+}
+
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+.lightbox{
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.94);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+    padding:70px;
+}
+
+.lightbox.active{
+    display:flex;
+}
+
+.lightbox img{
+    max-width:88%;
+
+    max-height:82vh;
+
+    width:auto;
+    height:auto;
+
+    object-fit:contain;
+
+    border-radius:9px;
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.4);
+
+    user-select:none;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.close-btn{
+    position:absolute;
+
+    top:22px;
+    right:32px;
+
+    width:45px;
+    height:45px;
+
+    border:none;
+
+    background:transparent;
+
+    color:#fff;
+
+    font-size:38px;
+
+    line-height:1;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+.close-btn:hover{
+    transform:scale(1.12);
+}
+
+
+/* =========================================================
+   LIGHTBOX NAVIGATION
+========================================================= */
+
+.nav-btn{
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:58px;
+    height:58px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    color:#fff;
+
+    font-size:27px;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+.nav-btn:hover{
+    background:#fff;
+
+    color:#111;
+}
+
+.prev{
+    left:25px;
+}
+
+.next{
+    right:25px;
+}
+
+
+/* =========================================================
+   IMAGE COUNTER
+========================================================= */
+
+.image-counter{
+    position:absolute;
+
+    bottom:25px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    background:rgba(0,0,0,.4);
+
+    padding:6px 12px;
+
+    border-radius:20px;
+}
+
+
+/* =========================================================
+   BACK SECTION
+========================================================= */
+
+.back-section{
+    padding:55px 8%;
+
+    text-align:center;
+}
+
+.back-btn{
+    display:inline-block;
+
+    padding:13px 28px;
+
+    background:#111;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    transition:.3s ease;
+}
+
+.back-btn:hover{
+    background:#333;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    background:#111;
+
+    color:#fff;
+
+    padding:55px 8%;
+
+    text-align:center;
+}
+
+.footer-content h3{
+    margin-bottom:12px;
+}
+
+.footer-content p{
+    color:#bbb;
+}
+
+.copyright{
+    margin-top:20px;
+
+    font-size:14px;
+}
+
+.copyright a{
+    color:#fff;
+
+    text-decoration:none;
+}
+
+.copyright a:hover{
+    text-decoration:underline;
+}
+
+.powered-by{
+    margin-top:25px;
+
+    font-size:14px;
+
+    color:#aaa;
+}
+
+.powered-by a{
+    color:#fff;
+
+    text-decoration:none;
+}
+
+.powered-by a:hover{
+    text-decoration:underline;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1100px){
+
+    .album-grid{
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+    .gallery-grid{
+        column-count:3;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:768px){
+
+    .navbar{
+        padding:14px 18px;
+
+        gap:16px;
+    }
+
+    .logo{
+        font-size:1.3rem;
+
+        flex-shrink:0;
+    }
+
+    .navbar nav{
+        display:flex;
+
+        gap:16px;
+
+        align-items:center;
+
+        justify-content:flex-end;
+
+        flex-wrap:wrap;
+    }
+
+    .navbar nav a{
+        font-size:.88rem;
+
+        white-space:nowrap;
+
+        padding:4px 0;
+    }
+
+
+    .gallery-hero{
+        min-height:42vh;
+
+        padding:35px 0;
+    }
+
+    .hero-content{
+        width:calc(100% - 36px);
+
+        max-width:none;
+    }
+
+    .hero-content h1{
+        font-size:2.25rem;
+
+        line-height:1.15;
+
+        letter-spacing:-.5px;
+
+        margin-bottom:12px;
+    }
+
+    .hero-content p{
+        font-size:.95rem;
+
+        line-height:1.55;
+
+        max-width:500px;
+    }
+
+
+    .recent-work{
+        width:calc(100% - 28px);
+
+        margin:45px auto 60px;
+    }
+
+    .section-heading{
+        margin-bottom:25px;
+
+        padding:0 6px;
+    }
+
+    .section-heading h2{
+        font-size:1.7rem;
+
+        line-height:1.25;
+
+        margin-bottom:7px;
+    }
+
+    .section-heading p{
+        font-size:.9rem;
+
+        line-height:1.55;
+    }
+
+
+    .album-grid{
+        grid-template-columns:1fr;
+
+        gap:16px;
+    }
+
+
+    .album-card{
+        border-radius:14px;
+
+        box-shadow:
+            0 5px 18px rgba(0,0,0,.07);
+    }
+
+    .album-card:hover{
+        transform:none;
+
+        box-shadow:
+            0 5px 18px rgba(0,0,0,.07);
+    }
+
+    .album-cover{
+        height:235px;
+    }
+
+    .album-card:hover .album-cover img{
+        transform:none;
+    }
+
+    .album-content{
+        padding:16px 17px 18px;
+    }
+
+    .album-content h3{
+        font-size:1.08rem;
+
+        margin-bottom:6px;
+    }
+
+    .album-content p{
+        font-size:.88rem;
+
+        line-height:1.5;
+
+        margin-bottom:13px;
+    }
+
+    .view-album{
+        font-size:.9rem;
+
+        padding:4px 0;
+    }
+
+
+    .photo-count{
+        top:12px;
+        right:12px;
+
+        padding:6px 10px;
+
+        font-size:12px;
+    }
+
+
+    .album-viewer{
+        width:calc(100% - 28px);
+
+        margin:0 auto 60px;
+    }
+
+    .viewer-header{
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:14px;
+
+        margin-bottom:20px;
+    }
+
+    .viewer-title{
+        width:100%;
+    }
+
+    .viewer-title h2{
+        font-size:1.6rem;
+
+        line-height:1.25;
+
+        margin-bottom:4px;
+    }
+
+    .viewer-title p{
+        font-size:.88rem;
+
+        line-height:1.5;
+    }
+
+    .close-album{
+        padding:10px 18px;
+
+        font-size:.86rem;
+
+        min-height:42px;
+    }
+
+
+    .gallery-grid{
+        column-count:2;
+
+        column-gap:10px;
+    }
+
+    .gallery-item{
+        margin-bottom:10px;
+
+        border-radius:10px;
+
+        box-shadow:
+            0 4px 14px rgba(0,0,0,.06);
+    }
+
+    .gallery-item:hover{
+        transform:none;
+
+        box-shadow:
+            0 4px 14px rgba(0,0,0,.06);
+    }
+
+    .gallery-item:hover img{
+        transform:none;
+    }
+
+
+    .empty-gallery{
+        padding:45px 18px;
+
+        border-radius:12px;
+
+        font-size:.9rem;
+    }
+
+
+    .gallery-cta{
+        padding:50px 20px;
+    }
+
+    .gallery-cta h2{
+        font-size:1.65rem;
+
+        line-height:1.25;
+
+        margin-bottom:10px;
+    }
+
+    .gallery-cta p{
+        font-size:.9rem;
+
+        line-height:1.55;
+
+        margin-bottom:22px;
+    }
+
+    .book-btn{
+        padding:13px 27px;
+
+        font-size:.9rem;
+    }
+
+
+    .back-section{
+        padding:40px 20px;
+    }
+
+    .back-btn{
+        padding:12px 25px;
+
+        font-size:.9rem;
+    }
+
+
+    .lightbox{
+        padding:65px 8px 55px;
+    }
+
+    .lightbox img{
+        max-width:92%;
+
+        max-height:76vh;
+
+        border-radius:7px;
+    }
+
+
+    .close-btn{
+        top:10px;
+
+        right:10px;
+
+        width:44px;
+        height:44px;
+
+        font-size:32px;
+
+        z-index:2;
+    }
+
+
+    .nav-btn{
+        width:42px;
+        height:42px;
+
+        font-size:19px;
+
+        z-index:2;
+    }
+
+    .prev{
+        left:7px;
+    }
+
+    .next{
+        right:7px;
+    }
+
+
+    .image-counter{
+        bottom:14px;
+
+        font-size:12px;
+
+        padding:5px 11px;
+
+        white-space:nowrap;
+    }
+
+
+    footer{
+        padding:45px 20px;
+    }
+
+    .footer-content h3{
+        font-size:1.05rem;
+
+        margin-bottom:9px;
+    }
+
+    .footer-content p{
+        font-size:.85rem;
+
+        line-height:1.55;
+    }
+
+    .copyright{
+        margin-top:17px;
+
+        font-size:12px;
+    }
+
+    .powered-by{
+        margin-top:20px;
+
+        font-size:12px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:500px){
+
+    .navbar{
+        padding:13px 15px;
+
+        gap:12px;
+    }
+
+    .logo{
+        font-size:1.18rem;
+    }
+
+    .navbar nav{
+        gap:13px;
+    }
+
+    .navbar nav a{
+        font-size:.82rem;
+    }
+
+
+    .gallery-hero{
+        min-height:38vh;
+
+        padding:30px 0;
+    }
+
+    .hero-content{
+        width:calc(100% - 28px);
+    }
+
+    .hero-content h1{
+        font-size:1.9rem;
+
+        line-height:1.18;
+
+        margin-bottom:10px;
+    }
+
+    .hero-content p{
+        font-size:.88rem;
+
+        line-height:1.5;
+    }
+
+
+    .recent-work{
+        width:calc(100% - 22px);
+
+        margin:38px auto 50px;
+    }
+
+    .section-heading{
+        margin-bottom:22px;
+    }
+
+    .section-heading h2{
+        font-size:1.5rem;
+    }
+
+    .section-heading p{
+        font-size:.84rem;
+    }
+
+
+    .album-grid{
+        gap:14px;
+    }
+
+    .album-cover{
+        height:210px;
+    }
+
+    .album-content{
+        padding:15px 15px 17px;
+    }
+
+    .album-content h3{
+        font-size:1.02rem;
+    }
+
+    .album-content p{
+        font-size:.84rem;
+
+        margin-bottom:11px;
+    }
+
+    .view-album{
+        font-size:.86rem;
+    }
+
+    .photo-count{
+        top:10px;
+
+        right:10px;
+
+        padding:5px 9px;
+
+        font-size:11px;
+    }
+
+
+    .album-viewer{
+        width:calc(100% - 22px);
+
+        margin-bottom:50px;
+    }
+
+    .viewer-title h2{
+        font-size:1.45rem;
+    }
+
+    .viewer-title p{
+        font-size:.82rem;
+    }
+
+    .close-album{
+        min-height:40px;
+
+        padding:9px 16px;
+    }
+
+
+    .gallery-grid{
+        column-count:1;
+
+        column-gap:0;
+    }
+
+    .gallery-item{
+        margin-bottom:13px;
+
+        border-radius:10px;
+    }
+
+
+    .gallery-cta{
+        padding:45px 16px;
+    }
+
+    .gallery-cta h2{
+        font-size:1.5rem;
+    }
+
+    .gallery-cta p{
+        font-size:.84rem;
+
+        margin-bottom:20px;
+    }
+
+    .book-btn{
+        width:100%;
+
+        max-width:300px;
+
+        box-sizing:border-box;
+
+        padding:13px 20px;
+    }
+
+
+    .back-section{
+        padding:35px 16px;
+    }
+
+    .back-btn{
+        width:100%;
+
+        max-width:300px;
+
+        box-sizing:border-box;
+
+        padding:12px 20px;
+    }
+
+
+    .lightbox{
+        padding:60px 5px 50px;
+    }
+
+    .lightbox img{
+        max-width:96%;
+
+        max-height:74vh;
+
+        border-radius:6px;
+    }
+
+    .close-btn{
+        top:8px;
+
+        right:7px;
+
+        width:42px;
+        height:42px;
+
+        font-size:30px;
+    }
+
+    .nav-btn{
+        width:38px;
+        height:38px;
+
+        font-size:17px;
+    }
+
+    .prev{
+        left:5px;
+    }
+
+    .next{
+        right:5px;
+    }
+
+    .image-counter{
+        bottom:10px;
+
+        font-size:11px;
+
+        padding:5px 10px;
+    }
+
+
+    footer{
+        padding:40px 16px;
+    }
+
+    .footer-content h3{
+        font-size:1rem;
+    }
+
+    .footer-content p{
+        font-size:.8rem;
+    }
+
+    .copyright{
+        font-size:11px;
+    }
+
+    .powered-by{
+        font-size:11px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media(max-width:380px){
+
+    .navbar{
+        padding:12px 12px;
+
+        gap:9px;
+    }
+
+    .logo{
+        font-size:1.08rem;
+    }
+
+    .navbar nav{
+        gap:10px;
+    }
+
+    .navbar nav a{
+        font-size:.76rem;
+    }
+
+
+    .gallery-hero{
+        min-height:36vh;
+
+        padding:25px 0;
+    }
+
+    .hero-content{
+        width:calc(100% - 22px);
+    }
+
+    .hero-content h1{
+        font-size:1.7rem;
+    }
+
+    .hero-content p{
+        font-size:.82rem;
+    }
+
+
+    .recent-work{
+        width:calc(100% - 18px);
+
+        margin:32px auto 42px;
+    }
+
+    .section-heading h2{
+        font-size:1.4rem;
+    }
+
+    .section-heading p{
+        font-size:.8rem;
+    }
+
+
+    .album-cover{
+        height:195px;
+    }
+
+    .album-content{
+        padding:14px;
+    }
+
+    .album-content h3{
+        font-size:1rem;
+    }
+
+    .album-content p{
+        font-size:.8rem;
+    }
+
+
+    .album-viewer{
+        width:calc(100% - 18px);
+    }
+
+    .viewer-title h2{
+        font-size:1.35rem;
+    }
+
+    .viewer-title p{
+        font-size:.79rem;
+    }
+
+
+    .gallery-cta{
+        padding:40px 14px;
+    }
+
+    .gallery-cta h2{
+        font-size:1.4rem;
+    }
+
+
+    .lightbox{
+        padding:55px 3px 45px;
+    }
+
+    .lightbox img{
+        max-width:97%;
+
+        max-height:72vh;
+    }
+
+    .nav-btn{
+        width:35px;
+        height:35px;
+
+        font-size:15px;
+    }
+
+    .prev{
+        left:3px;
+    }
+
+    .next{
+        right:3px;
+    }
+
+    .close-btn{
+        top:6px;
+
+        right:4px;
+
+        font-size:28px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+
+        scroll-behavior:auto !important;
+
+        transition:none !important;
+
+        animation:none !important;
+
+    }
+
+}
+
+</style>
+
+<link rel="stylesheet" href="frontend-core.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+<div class="logo">
+    Photographer
+</div>
+
+<nav>
+
+    <a href="client.html">
+        Home
+    </a>
+
+    <a href="client.html">
+        Book Now
+    </a>
+
+</nav>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="gallery-hero">
+
+<div class="hero-content">
+
+    <h1>
+        Recent Work
+    </h1>
+
+    <p>
+        A collection of our recent work,
+        beautifully captured.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     RECENT WORK / ALBUMS
+===================================================== -->
+
+<section
+    class="recent-work"
+    id="recentWork">
+
+<div class="section-heading">
+
+    <h2>
+        Recent Work
+    </h2>
+
+    <p>
+        Explore our latest photography projects.
+    </p>
+
+</div>
+
+<div
+    class="album-grid"
+    id="albumGrid">
+
+    <!-- Albums loaded dynamically -->
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ALBUM VIEWER
+===================================================== -->
+
+<section
+    class="album-viewer"
+    id="albumViewer">
+
+<div class="viewer-header">
+
+    <div class="viewer-title">
+
+        <h2 id="viewerTitle">
+            Album
+        </h2>
+
+        <p id="viewerCount">
+            0 Photos
+        </p>
+
+    </div>
+
+    <button
+        class="close-album"
+        id="closeAlbum">
+
+        ← Back to Albums
+
+    </button>
+
+</div>
+
+<div
+    class="gallery-grid"
+    id="galleryGrid">
+
+    <!-- Photos loaded dynamically -->
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="gallery-cta">
+
+<h2>
+    Loved this work?
+</h2>
+
+<p>
+    Book your photography session today.
+</p>
+
+<a
+    href="client.html"
+    class="book-btn">
+
+    Book Now
+
+</a>
+
+</section>
+
+
+<!-- =====================================================
+     BACK SECTION
+===================================================== -->
+
+<section class="back-section">
+
+<a
+    href="client.html"
+    class="back-btn">
+
+    ← Back to Home
+
+</a>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="footer-content">
+
+    <h3>
+        Photographer
+    </h3>
+
+    <p>
+        Capturing timeless memories through
+        creative photography.
+    </p>
+
+    <p class="copyright">
+
+        © 2026
+
+        <a href="index.html">
+            Professional Studio
+        </a>.
+
+        All Rights Reserved.
+
+    </p>
+
+    <p class="powered-by">
+
+        Powered by
+
+        <a
+            href="https://bluehorizanlabs.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Bluehorizanlabs
+
+        </a>
+
+    </p>
+
+</div>
+
+</footer>
+
+
+<!-- =====================================================
+     LIGHTBOX
+===================================================== -->
+
+<div
+    id="lightbox"
+    class="lightbox"
+    aria-hidden="true">
+
+<button
+    class="close-btn"
+    id="lightboxClose"
+    aria-label="Close image">
+
+    &times;
+
+</button>
+
+<button
+    class="nav-btn prev"
+    id="prevBtn"
+    aria-label="Previous image">
+
+    &#10094;
+
+</button>
+
+<img
+    id="lightboxImage"
+    src=""
+    alt="Gallery Image">
+
+<button
+    class="nav-btn next"
+    id="nextBtn"
+    aria-label="Next image">
+
+    &#10095;
+
+</button>
+
+<div class="image-counter">
+
+    <span id="currentImage">
+        1
+    </span>
+
+    /
+
+    <span id="totalImages">
+        1
+    </span>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =========================================================
+   SHARED STORAGE
+========================================================= */
+
+const RECENT_WORK_STORAGE_KEY =
+    "professionalStudio.portfolioStorage";
+
+const RECENT_WORK_DB_NAME =
+    "ProfessionalStudioDB";
+
+const RECENT_WORK_DB_VERSION =
+    1;
+
+const RECENT_WORK_OBJECT_STORE =
+    "recentWorkPhotos";
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const albumGrid =
+    document.getElementById("albumGrid");
+
+const recentWorkSection =
+    document.getElementById("recentWork");
+
+const albumViewer =
+    document.getElementById("albumViewer");
+
+const galleryGrid =
+    document.getElementById("galleryGrid");
+
+const viewerTitle =
+    document.getElementById("viewerTitle");
+
+const viewerCount =
+    document.getElementById("viewerCount");
+
+const closeAlbum =
+    document.getElementById("closeAlbum");
+
+
+/* =========================================================
+   LIGHTBOX ELEMENTS
+========================================================= */
+
+const lightbox =
+    document.getElementById("lightbox");
+
+const lightboxImage =
+    document.getElementById("lightboxImage");
+
+const lightboxClose =
+    document.getElementById("lightboxClose");
+
+const prevBtn =
+    document.getElementById("prevBtn");
+
+const nextBtn =
+    document.getElementById("nextBtn");
+
+const currentImage =
+    document.getElementById("currentImage");
+
+const totalImages =
+    document.getElementById("totalImages");
+
+
+/* =========================================================
+   CURRENT ALBUM
+========================================================= */
+
+let currentAlbum = null;
+
+let currentIndex = 0;
+
+
+/* =========================================================
+   INDEXEDDB
+========================================================= */
+
+let databasePromise = null;
+
+
+/* =========================================================
+   OBJECT URL MANAGEMENT
+========================================================= */
+
+const activeObjectUrls =
+    new Set();
+
+
+function createObjectURL(blob){
+
+    if(!blob){
+
+        return "";
+
+    }
+
+
+    const url =
+        URL.createObjectURL(blob);
+
+
+    activeObjectUrls.add(url);
+
+
+    return url;
+
+}
+
+
+function revokeObjectURL(url){
+
+    if(!url){
+
+        return;
+
+    }
+
+
+    if(activeObjectUrls.has(url)){
+
+        URL.revokeObjectURL(url);
+
+        activeObjectUrls.delete(url);
+
+    }
+
+}
+
+
+function revokeAllObjectURLs(){
+
+    activeObjectUrls.forEach(
+        url => {
+
+            URL.revokeObjectURL(url);
+
+        }
+    );
+
+
+    activeObjectUrls.clear();
+
+}
+
+
+/* =========================================================
+   OPEN INDEXEDDB
+========================================================= */
+
+function openDatabase(){
+
+    if(databasePromise){
+
+        return databasePromise;
+
+    }
+
+
+    databasePromise =
+        new Promise(
+            (resolve,reject) => {
+
+                if(
+                    !("indexedDB" in window)
+                ){
+
+                    reject(
+                        new Error(
+                            "IndexedDB is not supported by this browser."
+                        )
+                    );
+
+                    return;
+
+                }
+
+
+                const request =
+                    indexedDB.open(
+                        RECENT_WORK_DB_NAME,
+                        RECENT_WORK_DB_VERSION
+                    );
+
+
+                request.onupgradeneeded =
+                    event => {
+
+                        const db =
+                            event.target.result;
+
+
+                        if(
+                            !db.objectStoreNames.contains(
+                                RECENT_WORK_OBJECT_STORE
+                            )
+                        ){
+
+                            const store =
+                                db.createObjectStore(
+                                    RECENT_WORK_OBJECT_STORE,
+                                    {
+                                        keyPath:"id"
+                                    }
+                                );
+
+
+                            store.createIndex(
+                                "albumId",
+                                "albumId",
+                                {
+                                    unique:false
+                                }
+                            );
+
+                        }
+
+                    };
+
+
+                request.onsuccess =
+                    event => {
+
+                        const db =
+                            event.target.result;
+
+
+                        db.onversionchange =
+                            () => {
+
+                                db.close();
+
+                            };
+
+
+                        resolve(db);
+
+                    };
+
+
+                request.onerror =
+                    () => {
+
+                        reject(
+                            request.error ||
+                            new Error(
+                                "Unable to open Recent Work database."
+                            )
+                        );
+
+                    };
+
+            }
+        );
+
+
+    return databasePromise;
+
+}
+
+
+/* =========================================================
+   GET PHOTO BLOB
+========================================================= */
+
+async function getPhotoBlob(blobKey){
+
+    if(!blobKey){
+
+        return null;
+
+    }
+
+
+    const db =
+        await openDatabase();
+
+
+    return new Promise(
+        (resolve,reject) => {
+
+            const transaction =
+                db.transaction(
+                    RECENT_WORK_OBJECT_STORE,
+                    "readonly"
+                );
+
+
+            const store =
+                transaction.objectStore(
+                    RECENT_WORK_OBJECT_STORE
+                );
+
+
+            const request =
+                store.get(blobKey);
+
+
+            request.onsuccess =
+                () => {
+
+                    const record =
+                        request.result;
+
+
+                    if(!record){
+
+                        resolve(null);
+
+                        return;
+
+                    }
+
+
+                    if(record.blob){
+
+                        resolve(record.blob);
+
+                        return;
+
+                    }
+
+
+                    resolve(null);
+
+                };
+
+
+            request.onerror =
+                () => {
+
+                    reject(
+                        request.error ||
+                        new Error(
+                            "Unable to read gallery image."
+                        )
+                    );
+
+                };
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   GET PHOTO URL
+========================================================= */
+
+async function getPhotoObjectURL(file){
+
+    if(!file){
+
+        return "";
+
+    }
+
+
+    /*
+       New Recent Work architecture:
+       file.blobKey points to the actual Blob
+       stored in IndexedDB.
+    */
+
+    if(file.blobKey){
+
+        try{
+
+            const blob =
+                await getPhotoBlob(
+                    file.blobKey
+                );
+
+
+            if(blob){
+
+                return createObjectURL(
+                    blob
+                );
+
+            }
+
+        }catch(error){
+
+            console.error(
+                "Unable to load gallery image:",
+                error
+            );
+
+        }
+
+    }
+
+
+    /*
+       Legacy compatibility:
+       Older metadata may still contain a URL.
+       Keep this fallback so existing old data
+       does not immediately break.
+    */
+
+    if(
+        typeof file.url === "string" &&
+        file.url.trim()
+    ){
+
+        return file.url;
+
+    }
+
+
+    return "";
+
+}
+
+
+/* =========================================================
+   READ RECENT WORK STORAGE
+========================================================= */
+
+function getRecentWorkStorage(){
+
+    try{
+
+        const saved =
+            localStorage.getItem(
+                RECENT_WORK_STORAGE_KEY
+            );
+
+
+        if(!saved){
+
+            return {
+
+                usedMB:0,
+
+                files:[],
+
+                albums:[]
+
+            };
+
+        }
+
+
+        const storage =
+            JSON.parse(saved);
+
+
+        return {
+
+            usedMB:
+                Number(storage.usedMB) || 0,
+
+            files:
+                Array.isArray(storage.files)
+                ? storage.files
+                : [],
+
+            albums:
+                Array.isArray(storage.albums)
+                ? storage.albums
+                : []
+
+        };
+
+    }catch(error){
+
+        console.error(
+            "Unable to load Recent Work:",
+            error
+        );
+
+
+        return {
+
+            usedMB:0,
+
+            files:[],
+
+            albums:[]
+
+        };
+
+    }
+
+}
+
+
+/* =========================================================
+   BUILD ALBUM DATA
+========================================================= */
+
+function getRecentWorkAlbums(){
+
+    const storage =
+        getRecentWorkStorage();
+
+
+    const files =
+        storage.files;
+
+
+    const albums =
+        storage.albums;
+
+
+    if(!albums.length){
+
+        return [];
+
+    }
+
+
+    /*
+       Public gallery rule:
+       If isPublic is explicitly false,
+       do not expose the album here.
+
+       Older albums without the property remain
+       visible for backwards compatibility.
+    */
+
+    return albums
+
+        .filter(
+            album =>
+                album.isPublic !== false
+        )
+
+        .map(
+            album => {
+
+                const albumFiles =
+                    files.filter(
+                        file =>
+                            file.albumId ===
+                            album.id
+                    );
+
+
+                let coverFile =
+                    albumFiles.find(
+                        file =>
+                            file.id ===
+                            album.coverFileId
+                    );
+
+
+                if(!coverFile){
+
+                    coverFile =
+                        albumFiles[0] || null;
+
+                }
+
+
+                return {
+
+                    id:
+                        album.id,
+
+                    serviceName:
+                        album.name ||
+                        "Untitled Album",
+
+                    coverFile:
+                        coverFile,
+
+                    files:
+                        albumFiles
+
+                };
+
+            }
+
+        );
+
+}
+
+
+/* =========================================================
+   GET IMAGE COUNT TEXT
+========================================================= */
+
+function getPhotoCountText(count){
+
+    return `${count} ${
+        count === 1
+        ? "Photo"
+        : "Photos"
+    }`;
+
+}
+
+
+/* =========================================================
+   RENDER ALBUMS
+========================================================= */
+
+async function renderAlbums(){
+
+    /*
+       Clean URLs from a previous render before
+       generating new ones.
+    */
+
+    revokeAllObjectURLs();
+
+
+    const albums =
+        getRecentWorkAlbums();
+
+
+    albumGrid.innerHTML =
+        "";
+
+
+    if(!albums.length){
+
+        albumGrid.innerHTML = `
+
+            <div class="empty-gallery">
+
+                No recent work available yet.
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    /*
+       Create cards immediately so the page
+       remains responsive while image blobs load.
+    */
+
+    const cards =
+        albums.map(
+            album => {
+
+                const card =
+                    document.createElement(
+                        "article"
+                    );
+
+
+                card.className =
+                    "album-card";
+
+
+                card.dataset.albumId =
+                    album.id;
+
+
+                card.innerHTML = `
+
+                    <div class="album-cover">
+
+                        <div
+                            class="album-cover-placeholder"
+                            style="
+                                width:100%;
+                                height:100%;
+                                display:flex;
+                                align-items:center;
+                                justify-content:center;
+                                color:#999;
+                                font-size:.9rem;
+                            ">
+
+                            Loading image...
+
+                        </div>
+
+
+                        <span class="photo-count">
+
+                            ${album.files.length}
+
+                            ${
+                                album.files.length === 1
+                                ? "Photo"
+                                : "Photos"
+                            }
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="album-content">
+
+                        <h3>
+                            ${escapeHTML(album.serviceName)}
+                        </h3>
+
+                        <p>
+
+                            ${album.files.length}
+
+                            ${
+                                album.files.length === 1
+                                ? "Photo"
+                                : "Photos"
+                            }
+
+                        </p>
+
+
+                        <span class="view-album">
+
+                            View Album
+
+                            <span>
+                                →
+                            </span>
+
+                        </span>
+
+                    </div>
+
+                `;
+
+
+                card.addEventListener(
+                    "click",
+                    () => openAlbum(album.id)
+                );
+
+
+                albumGrid.appendChild(card);
+
+
+                return {
+
+                    album,
+
+                    card
+
+                };
+
+            }
+        );
+
+
+    /*
+       Load album cover images from IndexedDB.
+    */
+
+    await Promise.all(
+        cards.map(
+            async ({
+                album,
+                card
+            }) => {
+
+                const cover =
+                    card.querySelector(
+                        ".album-cover"
+                    );
+
+
+                if(!album.coverFile){
+
+                    const placeholder =
+                        cover.querySelector(
+                            ".album-cover-placeholder"
+                        );
+
+
+                    if(placeholder){
+
+                        placeholder.textContent =
+                            "No cover image";
+
+                    }
+
+
+                    return;
+
+                }
+
+
+                const imageUrl =
+                    await getPhotoObjectURL(
+                        album.coverFile
+                    );
+
+
+                if(!imageUrl){
+
+                    const placeholder =
+                        cover.querySelector(
+                            ".album-cover-placeholder"
+                        );
+
+
+                    if(placeholder){
+
+                        placeholder.textContent =
+                            "No cover image";
+
+                    }
+
+
+                    return;
+
+                }
+
+
+                const image =
+                    document.createElement(
+                        "img"
+                    );
+
+
+                image.src =
+                    imageUrl;
+
+
+                image.alt =
+                    album.serviceName;
+
+
+                image.loading =
+                    "lazy";
+
+
+                image.addEventListener(
+                    "error",
+                    () => {
+
+                        revokeObjectURL(
+                            imageUrl
+                        );
+
+                        image.remove();
+
+                    },
+                    {
+                        once:true
+                    }
+                );
+
+
+                const placeholder =
+                    cover.querySelector(
+                        ".album-cover-placeholder"
+                    );
+
+
+                if(placeholder){
+
+                    placeholder.replaceWith(
+                        image
+                    );
+
+                }else{
+
+                    cover.insertBefore(
+                        image,
+                        cover.firstChild
+                    );
+
+                }
+
+            }
+        )
+    );
+
+}
+
+
+/* =========================================================
+   OPEN ALBUM
+========================================================= */
+
+async function openAlbum(albumId){
+
+    const albums =
+        getRecentWorkAlbums();
+
+
+    const album =
+        albums.find(
+            item =>
+                item.id === albumId
+        );
+
+
+    if(!album){
+
+        return;
+
+    }
+
+
+    currentAlbum = {
+
+        id:
+            album.id,
+
+        serviceName:
+            album.serviceName,
+
+        files:
+            album.files,
+
+        photos:[]
+
+    };
+
+
+    currentIndex =
+        0;
+
+
+    viewerTitle.textContent =
+        album.serviceName;
+
+
+    viewerCount.textContent =
+        getPhotoCountText(
+            album.files.length
+        );
+
+
+    galleryGrid.innerHTML =
+        "";
+
+
+    if(!album.files.length){
+
+        galleryGrid.innerHTML = `
+
+            <div class="empty-gallery">
+
+                No photos have been added
+                to this album yet.
+
+            </div>
+
+        `;
+
+    }else{
+
+        await renderAlbumPhotos(
+            album
+        );
+
+    }
+
+
+    recentWorkSection.style.display =
+        "none";
+
+
+    albumViewer.classList.add(
+        "active"
+    );
+
+
+    window.scrollTo({
+
+        top:
+            albumViewer.offsetTop - 30,
+
+        behavior:
+            "smooth"
+
+    });
+
+}
+
+
+/* =========================================================
+   RENDER ALBUM PHOTOS
+========================================================= */
+
+async function renderAlbumPhotos(album){
+
+    galleryGrid.innerHTML =
+        "";
+
+
+    const loadedPhotos = [];
+
+
+    /*
+       Load every actual Blob from IndexedDB.
+       Only successfully loaded images become
+       part of the lightbox array.
+    */
+
+    for(
+        let index = 0;
+        index < album.files.length;
+        index++
+    ){
+
+        const file =
+            album.files[index];
+
+
+        const imageUrl =
+            await getPhotoObjectURL(
+                file
+            );
+
+
+        if(!imageUrl){
+
+            continue;
+
+        }
+
+
+        loadedPhotos.push(
+            imageUrl
+        );
+
+
+        const item =
+            document.createElement(
+                "div"
+            );
+
+
+        item.className =
+            "gallery-item";
+
+
+        const img =
+            document.createElement(
+                "img"
+            );
+
+
+        img.src =
+            imageUrl;
+
+
+        img.alt =
+            `${album.serviceName} ${index + 1}`;
+
+
+        img.loading =
+            "lazy";
+
+
+        img.addEventListener(
+            "error",
+            () => {
+
+                revokeObjectURL(
+                    imageUrl
+                );
+
+            },
+            {
+                once:true
+            }
+        );
+
+
+        item.appendChild(
+            img
+        );
+
+
+        const photoIndex =
+            loadedPhotos.length - 1;
+
+
+        item.addEventListener(
+            "click",
+            () =>
+                openLightbox(
+                    photoIndex
+                )
+        );
+
+
+        galleryGrid.appendChild(
+            item
+        );
+
+    }
+
+
+    currentAlbum.photos =
+        loadedPhotos;
+
+
+    viewerCount.textContent =
+        getPhotoCountText(
+            loadedPhotos.length
+        );
+
+
+    if(!loadedPhotos.length){
+
+        galleryGrid.innerHTML = `
+
+            <div class="empty-gallery">
+
+                The photos in this album
+                are currently unavailable.
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+/* =========================================================
+   CLOSE ALBUM
+========================================================= */
+
+closeAlbum.addEventListener(
+    "click",
+    () => {
+
+        closeAlbumView();
+
+    }
+);
+
+
+/* =========================================================
+   CLOSE ALBUM VIEW
+========================================================= */
+
+function closeAlbumView(){
+
+    closeLightbox();
+
+
+    albumViewer.classList.remove(
+        "active"
+    );
+
+
+    recentWorkSection.style.display =
+        "block";
+
+
+    galleryGrid.innerHTML =
+        "";
+
+
+    currentAlbum =
+        null;
+
+
+    currentIndex =
+        0;
+
+
+    revokeAllObjectURLs();
+
+
+    window.scrollTo({
+
+        top:
+            recentWorkSection.offsetTop - 30,
+
+        behavior:
+            "smooth"
+
+    });
+
+}
+
+
+/* =========================================================
+   OPEN LIGHTBOX
+========================================================= */
+
+function openLightbox(index){
+
+    if(!currentAlbum){
+
+        return;
+
+    }
+
+
+    if(!currentAlbum.photos.length){
+
+        return;
+
+    }
+
+
+    if(
+        index < 0 ||
+        index >= currentAlbum.photos.length
+    ){
+
+        return;
+
+    }
+
+
+    currentIndex =
+        index;
+
+
+    updateLightbox();
+
+
+    lightbox.classList.add(
+        "active"
+    );
+
+
+    lightbox.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+/* =========================================================
+   UPDATE LIGHTBOX
+========================================================= */
+
+function updateLightbox(){
+
+    if(!currentAlbum){
+
+        return;
+
+    }
+
+
+    const photo =
+        currentAlbum.photos[
+            currentIndex
+        ];
+
+
+    if(!photo){
+
+        return;
+
+    }
+
+
+    lightboxImage.src =
+        photo;
+
+
+    lightboxImage.alt =
+        `${currentAlbum.serviceName} photo ${
+            currentIndex + 1
+        }`;
+
+
+    currentImage.textContent =
+        currentIndex + 1;
+
+
+    totalImages.textContent =
+        currentAlbum.photos.length;
+
+}
+
+
+/* =========================================================
+   CLOSE LIGHTBOX
+========================================================= */
+
+function closeLightbox(){
+
+    lightbox.classList.remove(
+        "active"
+    );
+
+
+    lightbox.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+
+    lightboxImage.src =
+        "";
+
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+/* =========================================================
+   NEXT IMAGE
+========================================================= */
+
+function nextImage(){
+
+    if(!currentAlbum){
+
+        return;
+
+    }
+
+
+    if(!currentAlbum.photos.length){
+
+        return;
+
+    }
+
+
+    currentIndex++;
+
+
+    if(
+        currentIndex >=
+        currentAlbum.photos.length
+    ){
+
+        currentIndex =
+            0;
+
+    }
+
+
+    updateLightbox();
+
+}
+
+
+/* =========================================================
+   PREVIOUS IMAGE
+========================================================= */
+
+function previousImage(){
+
+    if(!currentAlbum){
+
+        return;
+
+    }
+
+
+    if(!currentAlbum.photos.length){
+
+        return;
+
+    }
+
+
+    currentIndex--;
+
+
+    if(currentIndex < 0){
+
+        currentIndex =
+            currentAlbum.photos.length - 1;
+
+    }
+
+
+    updateLightbox();
+
+}
+
+
+/* =========================================================
+   LIGHTBOX BUTTONS
+========================================================= */
+
+lightboxClose.addEventListener(
+    "click",
+    closeLightbox
+);
+
+
+nextBtn.addEventListener(
+    "click",
+    nextImage
+);
+
+
+prevBtn.addEventListener(
+    "click",
+    previousImage
+);
+
+
+/* =========================================================
+   CLOSE WHEN CLICKING OUTSIDE
+========================================================= */
+
+lightbox.addEventListener(
+    "click",
+    event => {
+
+        if(
+            event.target ===
+            lightbox
+        ){
+
+            closeLightbox();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   KEYBOARD CONTROLS
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if(
+            !lightbox.classList.contains(
+                "active"
+            )
+        ){
+
+            return;
+
+        }
+
+
+        if(
+            event.key ===
+            "ArrowRight"
+        ){
+
+            event.preventDefault();
+
+            nextImage();
+
+        }
+
+
+        if(
+            event.key ===
+            "ArrowLeft"
+        ){
+
+            event.preventDefault();
+
+            previousImage();
+
+        }
+
+
+        if(
+            event.key ===
+            "Escape"
+        ){
+
+            event.preventDefault();
+
+            closeLightbox();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   MOBILE SWIPE
+========================================================= */
+
+let touchStartX =
+    0;
+
+let touchEndX =
+    0;
+
+
+lightbox.addEventListener(
+    "touchstart",
+    event => {
+
+        if(
+            !lightbox.classList.contains(
+                "active"
+            )
+        ){
+
+            return;
+
+        }
+
+
+        touchStartX =
+            event.changedTouches[0]
+                .screenX;
+
+    },
+    {
+        passive:true
+    }
+);
+
+
+lightbox.addEventListener(
+    "touchend",
+    event => {
+
+        if(
+            !lightbox.classList.contains(
+                "active"
+            )
+        ){
+
+            return;
+
+        }
+
+
+        touchEndX =
+            event.changedTouches[0]
+                .screenX;
+
+
+        handleSwipe();
+
+    },
+    {
+        passive:true
+    }
+);
+
+
+function handleSwipe(){
+
+    const difference =
+        touchStartX -
+        touchEndX;
+
+
+    if(
+        Math.abs(difference) < 50
+    ){
+
+        return;
+
+    }
+
+
+    if(difference > 0){
+
+        nextImage();
+
+    }else{
+
+        previousImage();
+
+    }
+
+}
+
+
+/* =========================================================
+   HTML ESCAPING
+========================================================= */
+
+function escapeHTML(value){
+
+    return String(value)
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+        .replace(
+            /</g,
+            "&lt;"
+        )
+        .replace(
+            />/g,
+            "&gt;"
+        )
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+function escapeAttribute(value){
+
+    return escapeHTML(value);
+
+}
+
+
+/* =========================================================
+   REFRESH GALLERY
+========================================================= */
+
+let refreshTimer =
+    null;
+
+
+function scheduleGalleryRefresh(){
+
+    clearTimeout(
+        refreshTimer
+    );
+
+
+    refreshTimer =
+        setTimeout(
+            async () => {
+
+                /*
+                   If the visitor is currently viewing
+                   an album, close it first so stale
+                   object URLs are not retained.
+                */
+
+                const wasViewingAlbum =
+                    Boolean(
+                        currentAlbum
+                    );
+
+
+                if(wasViewingAlbum){
+
+                    closeLightbox();
+
+                    albumViewer.classList.remove(
+                        "active"
+                    );
+
+                    recentWorkSection.style.display =
+                        "block";
+
+                    galleryGrid.innerHTML =
+                        "";
+
+                    currentAlbum =
+                        null;
+
+                }
+
+
+                revokeAllObjectURLs();
+
+
+                await renderAlbums();
+
+            },
+            100
+        );
+
+}
+
+
+/* =========================================================
+   CROSS-TAB STORAGE CHANGE
+========================================================= */
+
+window.addEventListener(
+    "storage",
+    event => {
+
+        if(
+            event.key ===
+            RECENT_WORK_STORAGE_KEY
+        ){
+
+            scheduleGalleryRefresh();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   SAME-TAB RECENT WORK CHANGE
+========================================================= */
+
+window.addEventListener(
+    "professionalStudioRecentWorkUpdated",
+    () => {
+
+        scheduleGalleryRefresh();
+
+    }
+);
+
+
+/* =========================================================
+   PAGE VISIBILITY REFRESH
+========================================================= */
+
+document.addEventListener(
+    "visibilitychange",
+    () => {
+
+        if(
+            document.visibilityState ===
+            "visible"
+        ){
+
+            scheduleGalleryRefresh();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   CLEANUP
+========================================================= */
+
+window.addEventListener(
+    "beforeunload",
+    () => {
+
+        revokeAllObjectURLs();
+
+    }
+);
+
+
+/* =========================================================
+   INITIALIZE
+========================================================= */
+
+renderAlbums();
+
+</script>
+
+<script src="frontend-core.js"></script>
+<script src="backend-client.js"></script>
+</body>
+
+</html>

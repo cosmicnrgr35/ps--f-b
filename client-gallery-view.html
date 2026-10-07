@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Private Gallery | Professional Studio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="client-gallery-view.css">
+</head>
+
+<body>
+
+    <!-- PASSWORD SCREEN -->
+    <section
+        class="screen password-screen hidden"
+        id="passwordScreen"
+    >
+        <div class="access-card">
+
+            <div class="access-mark">
+                PS
+            </div>
+
+            <span class="eyebrow">
+                PRIVATE CLIENT GALLERY
+            </span>
+
+            <h1 id="passwordGalleryName">
+                Private Gallery
+            </h1>
+
+            <p>
+                This gallery is password protected.
+                Enter the password provided by your photographer.
+            </p>
+
+            <form
+                id="passwordForm"
+                class="access-form"
+            >
+
+                <label for="galleryPasswordInput">
+                    Gallery password
+                </label>
+
+                <input
+                    id="galleryPasswordInput"
+                    type="password"
+                    autocomplete="current-password"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                >
+                    Open Gallery
+                </button>
+
+                <p
+                    class="access-error hidden"
+                    id="passwordError"
+                >
+                    Incorrect password. Please try again.
+                </p>
+
+            </form>
+
+        </div>
+    </section>
+
+
+    <!-- NOT FOUND -->
+    <section
+        class="screen message-screen hidden"
+        id="notFoundScreen"
+    >
+        <div class="message-card">
+
+            <div class="message-icon">
+                ○
+            </div>
+
+            <span class="eyebrow">
+                PRIVATE GALLERY
+            </span>
+
+            <h1>
+                Gallery not found.
+            </h1>
+
+            <p>
+                This private gallery link is invalid
+                or the gallery is no longer available.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- EXPIRED -->
+    <section
+        class="screen message-screen hidden"
+        id="expiredScreen"
+    >
+        <div class="message-card">
+
+            <div class="message-icon">
+                ×
+            </div>
+
+            <span class="eyebrow">
+                ACCESS PERIOD ENDED
+            </span>
+
+            <h1>
+                This gallery has expired.
+            </h1>
+
+            <p>
+                The access period for this private gallery
+                has ended. Please contact your photographer
+                if you need access again.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- GALLERY APP -->
+    <main
+        class="gallery-app hidden"
+        id="galleryApp"
+    >
+
+        <!-- HEADER -->
+        <header class="gallery-header">
+
+            <div class="header-inner">
+
+                <div class="brand">
+
+                    <span class="brand-mark">
+                        PS
+                    </span>
+
+                    <div>
+
+                        <span class="eyebrow">
+                            PROFESSIONAL STUDIO
+                        </span>
+
+                        <strong>
+                            Private Gallery
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="header-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-btn hidden"
+                        id="downloadGalleryBtn"
+                    >
+                        <span>↓</span>
+                        Download Gallery
+                    </button>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <div class="hero-inner">
+
+                <span class="eyebrow">
+                    YOUR PRIVATE GALLERY
+                </span>
+
+                <h1 id="galleryTitle">
+                    Gallery
+                </h1>
+
+                <p id="galleryDescription">
+                    Your photographs and videos are ready.
+                </p>
+
+                <div class="hero-meta">
+
+                    <span id="galleryClientName"></span>
+
+                    <span id="galleryExpiry"></span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- WEDDING ALBUM SELECTION -->
+        <section
+            class="selection-panel hidden"
+            id="selectionPanel"
+        >
+
+            <div>
+
+                <span class="eyebrow">
+                    WEDDING ALBUM
+                </span>
+
+                <h2>
+                    Select photos for your album.
+                </h2>
+
+                <p id="selectionDescription">
+                    Choose the photographs you want
+                    included in your physical album.
+                </p>
+
+            </div>
+
+
+            <div class="selection-status">
+
+                <strong>
+
+                    <span id="selectionCount">
+                        0
+                    </span>
+
+                    <span id="selectionLimit"></span>
+
+                </strong>
+
+                <span>
+                    photos selected
+                </span>
+
+            </div>
+
+
+            <div class="selection-actions">
+
+                <button
+                    type="button"
+                    class="secondary-btn"
+                    id="clearSelectionBtn"
+                >
+                    Clear Selection
+                </button>
+
+                <button
+                    type="button"
+                    class="primary-btn"
+                    id="submitSelectionBtn"
+                >
+                    Submit Selection
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- GALLERY CONTENT -->
+        <section class="gallery-content">
+
+            <!-- SECTIONS -->
+            <aside class="sections-sidebar">
+
+                <div class="sidebar-heading">
+
+                    <span class="eyebrow">
+                        SECTIONS
+                    </span>
+
+                    <strong>
+                        Your gallery
+                    </strong>
+
+                </div>
+
+                <div id="sectionsList"></div>
+
+            </aside>
+
+
+            <!-- MEDIA -->
+            <section class="media-area">
+
+                <div class="media-toolbar">
+
+                    <div>
+
+                        <span
+                            class="eyebrow"
+                            id="activeSectionEyebrow"
+                        >
+                            GALLERY
+                        </span>
+
+                        <h2 id="activeSectionTitle">
+                            All photos
+                        </h2>
+
+                    </div>
+
+                    <span
+                        class="media-count"
+                        id="mediaCount"
+                    >
+                        0 items
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="media-grid"
+                    id="mediaGrid"
+                ></div>
+
+
+                <div
+                    class="media-empty hidden"
+                    id="mediaEmpty"
+                >
+
+                    <div class="message-icon">
+                        □
+                    </div>
+
+                    <h3>
+                        No media here yet.
+                    </h3>
+
+                    <p>
+                        Your photographer has not
+                        added content to this section.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- CLIENT NOTE -->
+        <section
+            class="client-note-section hidden"
+            id="clientNoteSection"
+        >
+
+            <div class="note-card">
+
+                <span class="eyebrow">
+                    MESSAGE TO PHOTOGRAPHER
+                </span>
+
+                <h2>
+                    Add a note with your selection.
+                </h2>
+
+                <textarea
+                    id="generalComment"
+                    rows="4"
+                    maxlength="1000"
+                    placeholder="Optional message for your photographer..."
+                ></textarea>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="gallery-footer">
+
+            <span>
+                Private gallery powered by Professional Studio
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- MEDIA VIEWER -->
+    <div
+        class="viewer hidden"
+        id="viewer"
+    >
+
+        <div
+            class="viewer-backdrop"
+            id="viewerBackdrop"
+        ></div>
+
+
+        <div class="viewer-dialog">
+
+            <button
+                type="button"
+                class="viewer-close"
+                id="viewerClose"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+
+            <button
+                type="button"
+                class="viewer-nav viewer-prev"
+                id="viewerPrev"
+                aria-label="Previous"
+            >
+                ‹
+            </button>
+
+
+            <div
+                class="viewer-media-wrap"
+                id="viewerMediaWrap"
+            ></div>
+
+
+            <button
+                type="button"
+                class="viewer-nav viewer-next"
+                id="viewerNext"
+                aria-label="Next"
+            >
+                ›
+            </button>
+
+
+            <div class="viewer-footer">
+
+                <div>
+
+                    <strong id="viewerTitle">
+                        Media
+                    </strong>
+
+                    <span id="viewerPosition"></span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="secondary-btn hidden"
+                    id="viewerDownloadBtn"
+                >
+                    ↓ Download
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div
+        class="toast"
+        id="toast"
+    ></div>
+
+
+    <!-- ZIP GENERATION FOR FRONTEND PROTOTYPE -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"
+    ></script>
+
+    <script src="client-gallery-view.js"></script>
+
+<script src="backend-client.js"></script>
+</body>
+</html>
